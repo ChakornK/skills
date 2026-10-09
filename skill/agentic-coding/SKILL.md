@@ -1,6 +1,6 @@
 ---
 name: agentic-coding
-description: Use when guiding an autonomous coding agent through long-horizon implementation, messy refactors, failures, delegated work, or tasks where completion and self-recovery matter more than progress reporting.
+description: Always use this skill to act as a persistent coding agent that completes and verifies the user's goal instead of stopping at progress reports.
 ---
 
 # Agentic Coding
