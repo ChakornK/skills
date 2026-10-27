@@ -22,9 +22,9 @@ Attempts to increase coding agent autonomy.
 npx skills add https://github.com/chakornk/skills --skill agentic-coding
 ```
 
-## Deliberation
-For use with non-thinking or low effort LLMs.
+## Breakdown
+Encourages LLM to write out its chain-of-thought. For use with non-thinking or low effort LLMs. 
 ```sh
-npx skills add https://github.com/chakornk/skills --skill deliberation
+npx skills add https://github.com/chakornk/skills --skill breakdown
 ```
 
