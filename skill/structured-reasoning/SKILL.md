@@ -3,57 +3,58 @@ name: structured-reasoning
 description: >
   Structured reasoning framework for coding tasks. Use this skill for any coding task:
   bug fixing, code review, writing new code, debugging intermittent issues, or refactoring.
-  Enforces deep exploration before acting and continuous reasoning throughout.
+  Enforces deep, adversarial self-reasoning before acting and throughout execution.
 ---
 
 # Structured Reasoning
 
 ## The Core Principle
 
-Think before you act. Think after you see results. Think whenever you're uncertain —
-not just at the start, and not just in a fixed loop. Reasoning is not a phase that
-ends; it's something you return to any time the situation calls for it.
+Don't stop when you find an answer. Stop when you can no longer find a better one.
+
+The goal isn't to produce a good idea — it's to produce the best idea you're capable of,
+then defend it against every objection you can raise. If an objection holds, revise and
+repeat. Only commit to an answer when your best attempt to tear it down fails.
 
 ## How to Reason
 
-Don't fill out sections. Write out your thinking as it actually unfolds — including
-wrong turns, corrections, and uncertainty. The goal is to work toward the best answer,
-not to report one.
+Write out your thinking as it actually unfolds. No fixed format — just the actual work.
 
-A few behaviors that make reasoning actually useful:
+**Start broad, then pressure-test.**
+When approaching a problem, don't converge early. Generate multiple explanations, approaches,
+or interpretations. Then argue against each one — not perfunctorily, but as hard as you can.
+Steelman the alternatives before dismissing them. If a competing idea has real merit, it should
+change your answer, not just get acknowledged and set aside.
 
-**Generate before committing.**
-Before settling on a cause, fix, or approach, come up with at least a few alternatives.
-Then work out which one best fits the evidence. Picking the first plausible idea without
-considering others is the most common way to get it wrong.
+**Debate yourself.**
+For any conclusion you're about to act on, switch sides. Argue that you're wrong. Look for
+the flaw in your reasoning, the case you haven't considered, the assumption you're taking for
+granted. If you find one, address it before moving on. If you can't find one after genuinely
+trying, that's when you've earned confidence in the answer.
 
-**Stay uncertain until you're not.**
-Use hedged language — "I think," "one possibility," "this might be" — until you've
-actually worked something out. Certainty that isn't earned tends to close off better answers.
+**The bar is "beyond reasonable doubt," not "probably right."**
+A plausible answer isn't good enough. Ask: is there any reasonable objection I haven't
+answered? Any scenario where this fails? Any alternative I haven't seriously considered?
+If yes, keep going. If no — and you've actually tried — then proceed.
 
-**Revise out loud.**
-If you change your mind, don't delete — write "wait" or "actually" and keep going.
-Showing the correction is more useful than hiding it.
+**Revise visibly.**
+When your thinking changes, don't clean it up. Write "wait" or "actually" and keep going.
+The revision is part of the reasoning, not a mistake to hide.
 
-**Challenge your own conclusions.**
-Before moving from diagnosis to action, ask: what would have to be true for me to be
-wrong about this? If you can answer that, address it. If you can't, that's a signal you
-haven't thought it through yet.
-
-**Reason after seeing results.**
-When a test fails, a tool returns something unexpected, or new information arrives —
-stop and reason about what it means before acting again. Don't just react.
+**Reason after results too.**
+When a test fails, an assumption breaks, or something unexpected comes back — reason about
+what it means before reacting. A surprising result is new evidence. Treat it like one.
 
 ## When to Reason
 
-- Before any action when the right action isn't obvious
-- After any result that doesn't match what you expected
-- When you're about to repeat an approach that already failed
-- Whenever you feel uncertain about the next step
-- Any time in the middle of a task if your understanding shifts
+Before any non-trivial action. After any result that surprises you. Whenever you're about
+to repeat something that already failed. Any time your confidence is ahead of your evidence.
+
+The depth should match the stakes. A simple read can be done without much deliberation.
+A fix, a diagnosis, or a design decision should not be acted on until it's been genuinely
+pressure-tested.
 
 ## Task Thinking Guides
 
-For common coding tasks, `references/thinking-guides.md` has a set of questions worth
-working through. These aren't required sections — they're prompts to make sure you've
-covered the important ground before acting.
+For common coding tasks, `references/thinking-guides.md` has questions worth working
+through — not as required sections, but as prompts to make sure nothing important was skipped.
