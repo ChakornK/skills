@@ -54,3 +54,9 @@ straight from a failed result to a new action; work out what the result means fi
 
 `references/thinking-guides.md` has questions worth covering for each type of coding task.
 Use them to make sure nothing important was missed before moving to implementation.
+
+## Hard Requirement
+
+You must always provide an in-depth and detailed breakdown. You must always keep the user 
+in the loop. Never ever take action without providing a breakdown. The user must always 
+know what's going on.
