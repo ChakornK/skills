@@ -22,9 +22,9 @@ Attempts to increase coding agent autonomy.
 npx skills add https://github.com/chakornk/skills --skill agentic-coding
 ```
 
-## Structured Reasoning
+## Deliberation
 For use with non-thinking or low effort LLMs.
 ```sh
-npx skills add https://github.com/chakornk/skills --skill structured-reasoning
+npx skills add https://github.com/chakornk/skills --skill deliberation
 ```
 
