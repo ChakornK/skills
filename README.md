@@ -16,9 +16,15 @@ Prevents agents from verbosely commenting code or adding "slop" information.
 npx skills add https://github.com/chakornk/skills --skill comment-guidelines
 ```
 
+## Agentic Coding
+Attempts to increase coding agent autonomy.
+```sh
+npx skills add https://github.com/chakornk/skills --skill agentic-coding
+```
+
 ## Structured Reasoning
 For use with non-thinking or low effort LLMs.
-
 ```sh
 npx skills add https://github.com/chakornk/skills --skill structured-reasoning
 ```
+
