@@ -169,3 +169,47 @@ When new information arrives — a test fails, a response surprises you, an assu
 contradicted — treat it as a new attack on your current position. Return to the loop
 with the result as the opening challenge. Do not move to the next action until the loop
 has run on what you just learned.
+
+## Outcome Prediction — Before Every Action
+
+Before taking any action, map what could happen. Do not just decide what to do — predict
+the full space of outcomes and prepare a response to each. An action taken without
+anticipating its results is a blind action.
+
+For every action, work through the following before executing it:
+
+**1. What are all the realistic outcomes?**
+Not just the expected one — enumerate every plausible result, including partial successes,
+unexpected failures, and outcomes that would indicate your understanding of the problem is
+wrong. If you can only think of one outcome, you have not looked hard enough.
+
+**2. For each outcome: what does it mean?**
+If result A comes back, what does that confirm or rule out? What does it tell you about the
+state of the problem? Map each outcome to its implications — not just "it worked" or "it
+failed," but what specifically that result reveals.
+
+**3. For each outcome: what do you do next?**
+Before acting, you should already know what your next move is for each possible result.
+"I'll figure it out when I see the result" is not a plan. If result A, then next action is
+X. If result B, then next action is Y. If result C — something unexpected — then that is a
+signal to return to the argument loop before acting again.
+
+**4. What outcome would tell you that your current understanding is wrong?**
+Name it explicitly. If that outcome appears, it means your position has been defeated by
+evidence. Do not rationalize it away — return to the loop and rebuild from what you now know.
+
+Write this prediction out before executing the action. The format is not fixed, but it
+must include: the expected outcome, at least one unexpected outcome, and the prepared
+response to each. A prediction written after seeing the result is not a prediction.
+
+---
+
+### When Predictions Fail
+
+If the actual result does not match any predicted outcome, stop. Do not act again
+immediately. A prediction failure means your model of the situation was incomplete — the
+action loop was based on a position that the evidence has now attacked. Return to the
+argument loop with the unexpected result as the opening attack. Rebuild the position to
+account for what you did not anticipate, then re-run outcome prediction before the next
+action. Skipping this step and continuing to act on a defeated position is how cascading
+failures happen.
