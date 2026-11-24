@@ -1,111 +1,194 @@
-# Thinking Guides
+# Protocols
 
-Questions worth working through per task type. Not a checklist — prompts to make sure
-nothing important was skipped. Go as deep as the problem demands.
-
----
-
-## Fixing a bug
-
-**Understand the failure**
-- What exactly is the reported behavior vs. what should be happening?
-- What does the error or stack trace say, precisely? What does each part mean?
-- Which parts of the code are actually involved — and which ones are you assuming are involved?
-
-**Diagnose before concluding**
-- What are the different things that could explain this? Push past the obvious first answer.
-- For each candidate: what evidence supports it, and what evidence argues against it?
-- What's your leading hypothesis — and what's the strongest argument that it's wrong?
-- Trace the execution path step by step. Where exactly does it diverge from expected behavior?
-- If your hypothesis is right, what else would you expect to see? Is that present?
-
-**Design the fix**
-- What are a few different ways to fix this? What are the tradeoffs of each?
-- Does the fix address the root cause, or just mask the symptom?
-- What's the strongest objection to your chosen fix? Have you answered it?
-- What else could break?
-
-**Verify before moving on**
-- Trace through the fix with the original scenario. Does it actually work?
-- What's the edge case most likely to break this?
-- Is there anything about this fix you're not confident in? If so, address it.
+Complete every section for your task. All sections are mandatory.
+The rules in SKILL.md apply throughout.
 
 ---
 
-## Reviewing code
+## bug-fix
 
-**Understand what you're looking at**
-- What is this code supposed to do?
-- What assumptions does it seem to make about its inputs and environment?
+**`<scratchpad>`**
+Brain-dump everything you notice about the code and the bug report. Include things you're
+unsure about, contradictions you spot, questions you'd want answered. No structure required.
+Do not move on until you have exhausted your first-pass observations.
 
-**Read carefully**
-- For each function or block: what does it claim to do vs. what does it actually do?
-- Where are you slowing down because something feels off? That instinct is worth following.
-- For anything suspicious: what's the most charitable reading — is it actually fine? If not, why not?
+**`<analysis>`**
+State only what you can directly observe — no hypotheses yet:
 
-**Evaluate each issue**
-- How bad is this in practice — what's the realistic worst case?
-- Is there a scenario where this causes silent data corruption, or only a visible failure?
-- What's the priority order if there are multiple issues?
+- What is the reported vs. expected behavior?
+- What does each part of the error message or stack trace indicate?
+- Which functions, lines, or data flows are visibly involved?
+  Every claim must reference a specific line, variable, or behavior from the actual code.
 
-**Before finishing**
-- What's the single thing most important to fix?
-- Is there anything you glossed over that deserves a second look?
+_Red-team:_ What might you be misreading about the error or the code before moving on?
 
----
+**`<root_cause>`**
+List at least 3 possible causes. For each: what evidence supports it, what evidence
+contradicts it. Eliminate candidates one by one using the evidence. State your conclusion
+as: "I think the most likely cause is [X] because [A, B] and [C, D] rule out the
+alternatives — though I'm uncertain about [Y]."
+Trace the execution path step by step to the point of failure.
 
-## Writing new code
+_Red-team:_ What would have to be true in the code for your leading hypothesis to be wrong?
 
-**Nail the requirements first**
-- What are the inputs, outputs, and constraints? Be specific about types and edge cases.
-- What's ambiguous or underspecified? Don't proceed past ambiguity — resolve it or flag it.
-- What's the simplest input that would break a naive implementation?
+**`<plan>`**
+List at least 2 possible fixes. For each: why it would work, what risks it carries.
+Choose one and explain why it's preferable to the alternatives. State every file and
+function that will change.
 
-**Design before writing**
-- What are a few different ways to approach this? What are the tradeoffs?
-- Which approach holds up best when you try to find its failure cases?
-- How will edge cases be handled — null, empty, invalid, extreme, concurrent?
-- What's your biggest design uncertainty? Address it before writing.
+_Red-team:_ Could this fix address the symptom while leaving the root cause intact?
 
-**Verify after writing**
-- Trace through with a normal input. Right output?
-- Trace through with an edge case. Graceful failure?
-- Does it match what you described at the start? If not, which one is wrong?
+**`<implementation>`**
+Write the complete fixed code. No abbreviations, no `[...]`. Multiple files get separate
+comment headers. This is the only section where definitive, confident language is appropriate.
 
----
-
-## Debugging something unclear
-
-**Inventory what you actually know**
-- What do you know for certain vs. what are you assuming?
-- When does this happen, and critically — when doesn't it? What differs between those cases?
-- What does the stack trace point to? Is that the real source or a re-throw?
-
-**Generate and challenge hypotheses**
-- What are the distinct explanations for this behavior? Get past the first one.
-- For each: what would you expect to see if it were true? Is that present or absent?
-- What's your leading hypothesis — and what's the hardest question you can ask about it?
-- What single observation would most definitively confirm or rule it out?
-
-**Before fixing**
-- Can you reproduce this deterministically? If not, fix that first.
-- Are you fixing the root cause or the symptom?
+**`<verification>`**
+Trace through the fix with the original bug scenario — what is the output now?
+Trace through at least one edge case. State honestly whether any part of this fix
+could cause regressions, and how confident you are overall.
 
 ---
 
-## Refactoring
+## code-review
 
-**Understand what must not change**
-- What are the behavioral contracts — the observable inputs, outputs, and side effects
-  that callers depend on?
-- What are you most worried about breaking silently?
+**`<scratchpad>`**
+Read the code once through and write down everything you notice — suspicious patterns,
+things you'd question, areas that look fine, things you're unsure about. No filtering.
 
-**Plan carefully**
-- What's the order of changes that keeps each step independently verifiable?
-- For each change: why is the new version behaviorally equivalent? Can you articulate it precisely?
-- Which transformation is highest risk? Do that one last, or break it into smaller steps.
+**`<first_pass>`**
+For each function or logical block:
 
-**Verify after**
-- For each public interface: are inputs, outputs, and side effects identical?
-- What edge case is most likely to have quietly changed behavior?
-- If tests exist: would they catch a subtle behavioral change, or only a crash?
+- What it's supposed to do (name/comments)
+- What it actually does (code)
+- Any discrepancy between the two
+  No conclusions yet — only inventory.
+
+**`<deep_analysis>`**
+For each flagged area, trace the code path and state why it might be a problem.
+Generate multiple interpretations before settling on a severity. Check: null/undefined
+handling, off-by-one, async/race conditions, missing error handling, security, logic,
+performance. Assign severity: Critical | High | Medium | Low | Nitpick.
+
+_Red-team:_ For each issue, is there a reading of the code where it's actually fine?
+
+**`<findings>`**
+List confirmed issues by severity. For each:
+
+- **Issue:** short name
+- **Severity:** level
+- **Location:** file or function
+- **Problem:** what is wrong
+- **Fix:** how to address it, with a short snippet if helpful
+
+**`<summary>`**
+
+- Total counts by severity
+- Single biggest risk in one sentence
+- Recommendation: Ship as-is | Fix criticals first | Major rework needed
+
+---
+
+## code-generation
+
+**`<scratchpad>`**
+Think about the problem space before touching requirements. What's non-obvious about this?
+What could go wrong? What similar problems have you seen, and how were they approached?
+
+**`<requirements_check>`**
+Restate the requirements in your own words:
+
+- Inputs: types, formats, edge cases
+- Outputs: types, formats, constraints
+- Behavioral rules for each input type
+- Explicit failure modes to prevent
+  Flag every ambiguity. Do not proceed past ambiguities — surface them here.
+
+**`<design>`**
+Generate at least 2 design approaches. For each: data structures, algorithm, how edge cases
+are handled, tradeoffs. Choose one and explain why. Write pseudocode for any non-trivial logic.
+
+_Red-team:_ What input would break your chosen design?
+
+**`<implementation>`**
+Write the complete code based on the chosen design. Comment non-obvious logic.
+
+**`<verification>`**
+Trace through with: a normal input, an edge case, and an invalid input.
+Does each produce the right output or fail gracefully?
+Does the behavior match what you stated in `<requirements_check>`?
+
+---
+
+## deep-debug
+
+**`<scratchpad>`**
+Write everything you know, suspect, or are confused about. Include dead ends. Note what
+you don't have enough information about. This is the most important section for this
+protocol — do not rush it.
+
+**`<evidence_gathering>`**
+Inventory all evidence:
+
+- Exact error message verbatim — analyze each word and phrase
+- Stack trace — which frame is the real source vs. a re-throw?
+- When it occurs vs. when it doesn't (conditions, frequency, environment)
+  Mark each item: KNOWN (directly observed) vs. ASSUMED.
+
+**`<hypothesis_generation>`**
+Generate at least 3 hypotheses. For each:
+
+- The hypothesis stated precisely
+- Evidence supporting it
+- Evidence contradicting it
+- Plausibility: High | Medium | Low
+  Do not eliminate yet — just generate.
+
+**`<elimination>`**
+Work through each hypothesis against the full evidence set. Rule out what you can and
+explain exactly why. For anything not fully ruled out, state what additional observation
+would settle it. Conclude: "I think the most likely cause is [X] because [evidence],
+though [Y] can't be fully ruled out without [Z]."
+
+**`<plan>`**
+
+- Minimal fix that addresses the root cause
+- Guards or logging to add to prevent recurrence or confirm the fix
+- How to reproduce deterministically before fixing, if possible
+
+**`<implementation>`**
+Write the fix and any added guards or logging.
+
+**`<verification>`**
+Does the fix address the root cause from `<elimination>`?
+What would confirm it worked after the fix is deployed?
+Any regression risk?
+
+---
+
+## refactor
+
+**`<scratchpad>`**
+Read the code and write down what bothers you about it, what's confusing, what you'd
+want to change, and what you're worried about breaking. No filter.
+
+**`<current_state_analysis>`**
+
+- What does it do? (behavior — be precise about contracts)
+- What makes it hard to read, maintain, or extend?
+- What calls it, what does it call?
+- What behavioral contracts are non-negotiable?
+
+**`<refactor_plan>`**
+List each transformation you'll make. Order them smallest to largest — smaller atomic
+changes are safer. For each: why it improves the code, and why it's behaviorally equivalent.
+
+_Red-team:_ Which transformation is most likely to accidentally change behavior? How will you catch it?
+
+**`<implementation>`**
+Write the refactored code. Where equivalence is non-obvious, add a brief comment explaining
+why this version behaves identically to the original.
+
+**`<equivalence_check>`**
+For each public function: confirm inputs, outputs, and side effects are identical.
+Are there any edge cases where behavior might unintentionally differ?
+Would existing tests pass? If not, which ones and why?
