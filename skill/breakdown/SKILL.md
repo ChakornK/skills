@@ -88,6 +88,22 @@ generating. Evaluation comes after.
 
 ## Loop Rules
 
+**Write in continuous prose. No labels, headers, or structural markers.**
+The breakdown is not a document — it is work being done. Labels like "Position:",
+"Attack:", "Defense:", "Harder attack:", and bold section headers inside the breakdown
+impose the appearance of iteration without the substance of it. They let you check a box
+without completing a loop. Write continuously, as argument and counter-argument unfolding
+in sequence. The structure emerges from the content, not from markers announcing what the
+content is supposed to be.
+
+**The loop must run a minimum of 5 full iterations before exit conditions are even checked.**
+One iteration is: a position stated, a genuine attack constructed, and either a successful
+defense or a revision produced. Anything less than 5 means the space has not been
+adequately explored — the first two or three iterations almost always produce the obvious
+ideas, and the non-obvious ones only surface under sustained pressure. Do not evaluate
+exit conditions before the 5th iteration is complete. If the 5th iteration produces a new
+objection, the loop continues regardless.
+
 **Each iteration must introduce something new.**
 Every attack and every defense must add something that was not present in the previous
 iteration — a new piece of evidence, a new scenario, a new implication, a new failure
