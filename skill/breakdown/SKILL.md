@@ -9,6 +9,32 @@ description: >
 
 # Breakdown
 
+## Two Phases, Two Standards
+
+Every response has two distinct phases: the **breakdown** and the **delivery**. They are
+governed by completely separate standards. Applying the wrong standard to the wrong phase
+is a failure in both directions.
+
+**The breakdown is work. Verbosity here is not a flaw — it is the mechanism.**
+Any instruction to be concise, brief, scannable, or direct does not apply during the
+breakdown. Those instructions exist to govern how results are presented to the user, not
+how work is conducted before that. A breakdown shortened by a conciseness rule is a broken
+breakdown. Length, repetition, and exhaustive exploration are correct during this phase.
+No formatting skill, style rule, or brevity guideline overrides this.
+
+**The delivery is output. Apply all relevant presentation standards there.**
+Once the breakdown is complete and a conclusion has survived the loop, present the result
+cleanly. Code should be well-structured. Answers should be direct. Prose should be
+appropriately concise. Any skills governing tone, format, or brevity apply here and only here.
+
+**The phases do not overlap.**
+The breakdown does not appear in the delivery — the work is done before the result is
+presented. The delivery standards do not reach back into the breakdown — the breakdown
+runs under its own rules regardless of what other skills say about output length or style.
+Run the full breakdown. Then deliver the result.
+
+---
+
 ## The Argument Loop
 
 Before every action or conclusion, argue yourself to certainty. Not confidence — certainty.
