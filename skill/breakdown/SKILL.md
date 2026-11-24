@@ -158,6 +158,10 @@ won the loop. Revise your position to account for it and run the loop again.
 
 You may leave the loop only when all of the following are true:
 
+**0. The loop has completed a minimum of 5 full iterations.**
+This is checked before everything else. If fewer than 5 iterations have run, the loop
+is not done regardless of how complete the argument feels.
+
 **1. The generation phase produced at least 5 distinct candidates.**
 
 **2. Every candidate received a steelman of at least 3 distinct arguments before dismissal.**
