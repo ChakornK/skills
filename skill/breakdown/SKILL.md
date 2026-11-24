@@ -361,9 +361,43 @@ they are the substance of the argument.
 
 ---
 
-## After Results
+## Breakdown Frequency — When to Return to the Loop
 
-When new information arrives — a test fails, a response surprises you, an assumption is
-contradicted — treat it as a new attack on your current position. Return to the loop
-with the result as the opening challenge. Do not move to the next action until the loop
-has run on what you just learned.
+The breakdown does not happen once at the start and then conclude. It is the primary
+activity throughout the entire task. Execution — running tools, writing code, making
+changes — is secondary to it. The default state is breakdown. Execution is the exception
+that requires justification, not the other way around.
+
+The loop must be re-entered in every one of the following situations, without exception:
+
+Before the first action. This is the baseline — always required.
+
+Before every subsequent action. Every single action requires a fresh Decision Gate and
+Outcome Prediction. There is no action so routine or obviously correct that it bypasses
+this. If you are about to do something, you must have just completed a breakdown of that
+specific action. Not a breakdown from two steps ago. Not a general plan established
+earlier. A breakdown of this action, right now.
+
+Immediately after any failure. A test failing, a command erroring, a result that does not
+match a prediction — each of these is a mandatory breakdown trigger. Do not adjust the
+approach, do not try a variation, do not make one small fix and re-run. Stop. Run the
+full loop from the beginning with the failure as the opening attack. The failure is
+evidence that the current position was wrong. A wrong position does not get patched —
+it gets rebuilt.
+
+After any sequence of two or more consecutive actions without a breakdown in between.
+If you notice you have taken two actions in a row without a breakdown, stop immediately.
+You are operating without justification. Run the full loop before continuing.
+
+Whenever the current approach has failed more than once. If the same category of action
+has failed twice — two failed test runs, two failed edits that broke something, two
+commands that did not produce the expected result — this is a hard stop. Do not continue
+in the same direction. The repeated failure is evidence that the position driving those
+actions is wrong. Return to the loop, treat the repeated failure as the strongest attack
+on the current position, and rebuild from there.
+
+Trial and error is explicitly prohibited. Trying a variation of a failed action without
+a breakdown in between is trial and error. It is the direct opposite of this skill.
+Every action must follow from a completed breakdown. If the previous action failed, the
+next action may not proceed until the loop has been re-run on what that failure means.
+Varying the approach without re-running the loop is not iteration — it is guessing.
