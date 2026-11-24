@@ -1,25 +1,26 @@
 ---
 name: breakdown
 description: >
-  Problem breakdown framework for coding tasks. Use this skill for any coding task:
-  bug fixing, code review, writing new code, debugging intermittent issues, or refactoring.
-  Forces sustained adversarial self-argument before any action until a position survives
-  all challenges.
+  Problem breakdown framework for all tasks, big or small. Use this skill for any task:
+  coding, analysis, planning, decision-making, writing, debugging, reviewing, or any
+  situation that benefits from rigorous self-challenge before acting or concluding.
+  Forces sustained adversarial self-argument until a position survives all challenges.
 ---
 
 # Breakdown
 
 ## The Argument Loop
 
-Before every action, you must argue yourself to certainty. Not confidence — certainty.
-The way you get there is not by thinking carefully once. It is by proposing a position,
-attacking it, defending or revising it, then attacking it again. You repeat this until
-you have made your best attempt to destroy the position and failed. Only then do you act.
+Before every action or conclusion, argue yourself to certainty. Not confidence — certainty.
+The way you get there is not by considering something carefully once. It is by proposing a
+position, attacking it, defending or revising it, then attacking it again. You repeat this
+until you have made your best attempt to destroy the position and failed. Only then do you
+act or conclude.
 
 The loop:
 
 ```
-1. State a position — a diagnosis, cause, plan, or decision
+1. State a position — a diagnosis, claim, plan, decision, or interpretation
 2. Attack it — find the strongest possible objection you can construct
 3a. If the attack lands: revise the position. Return to 1.
 3b. If the attack doesn't land: explain precisely why not.
@@ -56,22 +57,40 @@ producing anything new — not before.
 
 ## Decision Gate — Before Every Action
 
-Before taking any action — editing a file, running a command, calling a tool — run the
-argument loop on the action itself:
+Before taking any action or delivering any conclusion — run the argument loop on it:
 
-- What are all the other actions you could take instead? Name them.
-- Why is this action strictly better than each alternative? Not "better" — strictly better.
+- What are all the other actions or conclusions available? Name them.
+- Why is this one strictly better than each alternative? Not "better" — strictly better.
   State the specific reason each alternative is inferior or ruled out.
-- What is the strongest argument that this action is wrong? Answer it.
-  If you cannot answer it, do not act — you have not won the loop yet.
+- What is the strongest argument that this is wrong? Answer it.
+  If you cannot answer it, do not proceed — you have not won the loop yet.
 
-No action is exempt. No action is too small or too obvious to skip this gate.
+No action or conclusion is exempt. Nothing is too small or too obvious to skip this gate.
 
 ## What to Argue About
 
 The loop needs material. Below are the core questions for each type of task. Feed them
 into the loop as starting positions or as attacks. They are not sections to complete —
 they are the substance of the argument.
+
+---
+
+### Critical Analysis
+
+- What is the actual claim or position being examined? Attack any characterization that
+  is vague, imprecise, or assumes its own conclusion.
+- What evidence supports it? For each piece of evidence: attack its relevance, its
+  reliability, and whether it actually supports the claim or merely correlates with it.
+- What assumptions does the position rest on? For each assumption: attack it. What would
+  have to be true for it to be wrong? Is that possible?
+- What is being left out? Build the strongest case that something important is missing
+  or being ignored. Then attack that case — is what's missing actually relevant?
+- What is the strongest opposing position? Do not construct a weak version of it —
+  build the most compelling form of the disagreement, then attack it rigorously.
+- What does the position predict or imply? Attack those implications — are they
+  consistent with what is known? Do any of them, if false, undermine the position itself?
+- After running the loop: what is the least certain part of the surviving conclusion?
+  Attack that specifically. If it holds, the conclusion holds.
 
 ---
 
@@ -146,7 +165,7 @@ they are the substance of the argument.
 
 ## After Results
 
-When a test fails, a command returns unexpectedly, or new information arrives — treat it
-as a new attack on your current position. Return to the loop with the result as the
-opening challenge. Do not move to the next action until the loop has run on what you
-just learned.
+When new information arrives — a test fails, a response surprises you, an assumption is
+contradicted — treat it as a new attack on your current position. Return to the loop
+with the result as the opening challenge. Do not move to the next action until the loop
+has run on what you just learned.
