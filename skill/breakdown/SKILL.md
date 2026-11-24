@@ -3,104 +3,150 @@ name: breakdown
 description: >
   Problem breakdown framework for coding tasks. Use this skill for any coding task:
   bug fixing, code review, writing new code, debugging intermittent issues, or refactoring.
-  Requires a thorough written analysis using structured sections before any code or action.
+  Forces sustained adversarial self-argument before any action until a position survives
+  all challenges.
 ---
 
 # Breakdown
 
-## Requirement
+## The Argument Loop
 
-Every coding response begins with a written breakdown using the sections defined in
-`references/protocols.md`. Choose the protocol that matches the task and complete every
-section before writing code or taking any action. Do not skip sections. Do not abbreviate.
+Before every action, you must argue yourself to certainty. Not confidence — certainty.
+The way you get there is not by thinking carefully once. It is by proposing a position,
+attacking it, defending or revising it, then attacking it again. You repeat this until
+you have made your best attempt to destroy the position and failed. Only then do you act.
 
-A short breakdown is a failed breakdown. If a section feels complete after a few sentences,
-it isn't — keep going. The first answer to any question in any section is a draft. After
-writing it, ask what it misses, what it assumes, and what a critic would say about it.
-Then write more.
+The loop:
 
-## Protocol Selection
+```
+1. State a position — a diagnosis, cause, plan, or decision
+2. Attack it — find the strongest possible objection you can construct
+3a. If the attack lands: revise the position. Return to 1.
+3b. If the attack doesn't land: explain precisely why not.
+     Then construct a harder attack. Return to 2.
+4. The loop ends only when a full round of attacks produces nothing
+   that has not already been answered.
+```
 
-| Task                                       | Protocol          |
-| ------------------------------------------ | ----------------- |
-| Fix a reported bug                         | `bug-fix`         |
-| Find issues in existing code               | `code-review`     |
-| Write new code from a description          | `code-generation` |
-| Diagnose an unclear or intermittent issue  | `deep-debug`      |
-| Restructure code without changing behavior | `refactor`        |
+This is not a formatting exercise. The attacks must be genuine. A weak attack followed
+by an easy defense is not a loop iteration — it is avoidance. The attack should be the
+strongest version of the objection you can build, not a straw man constructed to be
+knocked down. If you find yourself winning too easily, you are not attacking hard enough.
 
-## Decision Gate — Required Before Every Action
+Write the argument out in full. Every proposal, every attack, every defense. Do not
+summarize the loop after running it internally — the written argument is the work, not
+a record of work done elsewhere.
 
-Before taking any action — editing a file, running a command, calling a tool, writing
-code — answer all three of the following. No action is exempt, including actions that
-seem obvious.
+## Exit Conditions
 
-**1. What are all the options?**
-List every reasonable course of action available at this moment. Do not proceed with one
-option before you have genuinely considered the others. An action taken without enumerating
-alternatives is a reckless action.
+You may leave the loop only when both of the following are true:
 
-**2. Why is this option definitively the best?**
-Argue for the chosen action and against every alternative. Not "this seems right" — state
-specifically why each alternative is inferior or ruled out. If you cannot make that case
-with certainty, you are not ready to act. Keep working until you can.
+**1. The last full round of attacks produced no new objection.**
+Not "no strong objection" — no new objection at all. If you are still generating attacks
+that require a response, the loop is not done.
 
-**3. What is the strongest argument against this action?**
-State the best case against your chosen action. Then answer it. If you cannot answer it,
-do not proceed — revise your choice or gather more information first. An unresolved
-objection is a reason to stop, not a reason to continue carefully.
+**2. You have explicitly tried to find the objection that breaks your position and failed.**
+This means you have considered alternatives you believe are wrong, edge cases you think
+will not occur, and assumptions you believe are safe — and you have stated why each of
+them does not defeat the position. If you have not done this, you have not tried hard enough.
 
-These three questions are not a formality. If the answers are thin, the action is not
-justified. There is no urgency that overrides this gate. No action is so small or so
-obvious that it bypasses this requirement.
+Feeling confident is not an exit condition. Reaching a conclusion is not an exit condition.
+Having written a lot is not an exit condition. The loop ends when the attacks have stopped
+producing anything new — not before.
 
-## Rules That Apply to Every Protocol
+## Decision Gate — Before Every Action
 
-**The scratchpad is the most important section.**
-It should be the longest section in the breakdown. Write everything you notice, suspect,
-question, or are unsure about. Write down ideas you think are probably wrong. Write down
-what you don't know. Write down what feels obvious — obvious things are often where
-unexamined assumptions hide. Do not move on until you have written so much that you
-start repeating yourself. That is the signal that you have exhausted it, not the feeling
-of having covered the basics.
+Before taking any action — editing a file, running a command, calling a tool — run the
+argument loop on the action itself:
 
-**Your first answer is always a draft.**
-After completing any section or answering any question within a section, treat the result
-as a first pass. Ask: what did I miss? What am I assuming that I haven't examined? What
-would a critic say? What is the weakest part of this answer? Then write more. The goal is
-not to produce a clean answer on the first try — it is to produce the most complete answer
-you are capable of after multiple passes.
+- What are all the other actions you could take instead? Name them.
+- Why is this action strictly better than each alternative? Not "better" — strictly better.
+  State the specific reason each alternative is inferior or ruled out.
+- What is the strongest argument that this action is wrong? Answer it.
+  If you cannot answer it, do not act — you have not won the loop yet.
 
-**Obvious things deserve the most scrutiny.**
-When something seems clear or straightforward, that is precisely when to slow down. Obvious
-conclusions are where unexamined assumptions accumulate. If a section is coming together
-quickly and cleanly, that is a warning sign, not a sign of progress.
+No action is exempt. No action is too small or too obvious to skip this gate.
 
-**Enumerate before committing.**
-Any section that asks for a cause, plan, or solution requires multiple candidates before
-converging. Pick the first plausible idea and you will frequently pick the wrong one.
+## What to Argue About
 
-**Steelman before dismissing.**
-When arguing against a candidate, make the strongest case for it first. Dismissing a weak
-version of an idea is not the same as ruling it out.
+The loop needs material. Below are the core questions for each type of task. Feed them
+into the loop as starting positions or as attacks. They are not sections to complete —
+they are the substance of the argument.
 
-**Stay hedged until `<implementation>`.**
-Use uncertain language — "I think," "one possibility," "this might be" — in every section
-before implementation. Confident statements belong only in `<implementation>`.
+---
 
-**Revise out loud.**
-If your assessment changes mid-section, write "wait" or "actually" and continue. Do not
-delete — the revision is part of the analysis.
+### Bug Fix
 
-**Depth check before every section transition.**
-Before moving to the next section, answer these explicitly:
+- What is the actual failure? Not the symptom — the precise mechanism. Attack any
+  characterization of the failure that is imprecise or assumed.
+- What are all the possible causes? For each: build the strongest case that it is the
+  cause, then attack that case. Keep generating candidates until the loop produces none
+  that survive challenge.
+- What is the execution path from entry to failure? Attack every assumption in the trace.
+- What is the fix? For every proposed fix: attack its completeness (does it address the
+  root cause or just the symptom?), its safety (what does it break?), and its necessity
+  (is there a simpler fix that is strictly equivalent?). Defend or revise until one fix
+  survives all attacks.
+- After implementing: trace through the fix. Attack the trace — find the scenario where
+  it still fails. If you find one, return to the loop.
 
-- What did I almost miss or initially overlook in this section?
-- What is the weakest part of my current conclusion?
-- What would I investigate further if I had more time?
-  If any answer reveals something unaddressed, handle it before continuing.
+---
 
-**After any result, update before acting.**
-When a test fails or something unexpected comes back, return to the relevant protocol
-section and update the analysis before taking the next action. Work out what the result
-means. Do not move from a failed result directly to a new action.
+### Code Review
+
+- What does each function actually do vs. what it claims to do? Attack any assumption
+  that the name and behavior align.
+- For every suspicious area: build the case that it is a real bug, then attack that case.
+  Is there a reading of the code where it is correct? Attack that reading too.
+- For every issue: attack the severity. Could this be worse than rated? Is there a
+  scenario where this becomes a production incident?
+- What did you read too quickly? Go back and attack your first-pass assumptions.
+
+---
+
+### Code Generation
+
+- What are the actual requirements? Attack every assumption about unspecified behavior —
+  what happens at the edges, with invalid input, under failure, with concurrent access?
+- For each design: build the case that it is the best approach, then attack it. What
+  input breaks it? What requirement does it mishandle? Defend or discard.
+- After designing: attack the pseudocode. Find the case it does not handle.
+- After implementing: trace through with the hardest input identified. Attack the output —
+  is it actually correct, or does it only look correct?
+
+---
+
+### Deep Debug
+
+- What do you actually know vs. what are you assuming? Attack every assumption — what
+  would have to be true for it to be wrong?
+- For each hypothesis: build the strongest case that it is the cause, then attack it with
+  every piece of contradicting evidence. Do not dismiss a hypothesis until the attack is
+  rigorous, not just convenient.
+- What is the most uncomfortable hypothesis — the one requiring the most work to fix?
+  Attack your reasons for dismissing it. Are you dismissing it because evidence rules it
+  out, or because you do not want it to be true?
+- After identifying the cause: attack the identification. What would you expect to see
+  differently if the real cause were something else entirely?
+
+---
+
+### Refactor
+
+- What are the behavioral contracts? For each: attack the assumption that callers do not
+  depend on undocumented or accidental behavior. What if they do?
+- For each transformation: build the case that it is behaviorally equivalent, then attack
+  that case. Find the edge case where the new version behaves differently.
+- After planning: attack the order of changes. Is there a sequence where an earlier
+  change makes a later one harder to verify or introduces a window of broken behavior?
+- After implementing: for each public function, attack the claim that behavior is
+  identical. Trace through with an edge case not yet checked.
+
+---
+
+## After Results
+
+When a test fails, a command returns unexpectedly, or new information arrives — treat it
+as a new attack on your current position. Return to the loop with the result as the
+opening challenge. Do not move to the next action until the loop has run on what you
+just learned.
