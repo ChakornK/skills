@@ -1,495 +1,106 @@
 ---
 name: breakdown
 description: >
-  Problem breakdown framework for all tasks, big or small. Use this skill for any task:
-  coding, analysis, planning, decision-making, writing, debugging, reviewing, or any
-  situation that benefits from rigorous self-challenge before acting or concluding.
-  Forces sustained adversarial self-argument until a position survives all challenges.
+  Problem breakdown framework for coding tasks. Use this skill for any coding task:
+  bug fixing, code review, writing new code, debugging intermittent issues, or refactoring.
+  Requires a thorough written analysis using structured sections before any code or action.
 ---
 
 # Breakdown
 
-## Two Phases, Two Standards
-
-Every response has two distinct phases: the **breakdown** and the **delivery**. They are
-governed by completely separate standards. Applying the wrong standard to the wrong phase
-is a failure in both directions.
-
-**The breakdown is work. Verbosity here is not a flaw — it is the mechanism.**
-Any instruction to be concise, brief, scannable, or direct does not apply during the
-breakdown. Those instructions exist to govern how results are presented to the user, not
-how work is conducted before that. A breakdown shortened by a conciseness rule is a broken
-breakdown. Length, repetition, and exhaustive exploration are correct during this phase.
-No formatting skill, style rule, or brevity guideline overrides this.
-
-**The delivery is output. Apply all relevant presentation standards there.**
-Once the breakdown is complete and a conclusion has survived the loop, present the result
-cleanly. Code should be well-structured. Answers should be direct. Prose should be
-appropriately concise. Any skills governing tone, format, or brevity apply here and only here.
-
-**The phases do not overlap.**
-The breakdown does not appear in the delivery — the work is done before the result is
-presented. The delivery standards do not reach back into the breakdown — the breakdown
-runs under its own rules regardless of what other skills say about output length or style.
-Run the full breakdown. Then deliver the result.
-
----
-
-## The Argument Loop
-
-Before every action or conclusion, argue yourself to certainty. Not confidence — certainty.
-The way you get there is not by considering something carefully once. It is by proposing a
-position, attacking it, defending or revising it, then attacking it again. You repeat this
-until you have made your best attempt to destroy the position and failed. Only then do you
-act or conclude.
-
-The loop:
-
-```
-1. Generate — produce all candidates before evaluating any of them
-2. State a position — a diagnosis, claim, plan, decision, or interpretation
-3. Attack it — find the strongest possible objection you can construct
-4a. If the attack lands: revise the position. Return to 2.
-4b. If the attack doesn't land: explain precisely why not.
-     Then construct a harder attack. Return to 3.
-5. The loop ends only when a full round of attacks produces nothing
-   that has not already been answered.
-```
-
-This is not a formatting exercise. The attacks must be genuine. A weak attack followed
-by an easy defense is not a loop iteration — it is avoidance. If you find yourself
-winning too easily, you are not attacking hard enough.
-
-Write the argument out in full. Every proposal, every attack, every defense. Do not
-summarize the loop after running it internally — the written argument is the work, not
-a record of work done elsewhere.
-
-## Paranoia as the Default Posture
-
-Assume you are wrong. Not as a rhetorical exercise — as a genuine starting posture.
-Every position you hold, every conclusion you have reached, every plan you are about
-to execute: assume there is something wrong with it that you have not found yet. Your
-job is to find it before it finds you.
-
-This means treating every piece of your own output with suspicion. When something seems
-to be working, ask why it appears to be working and whether that appearance is reliable.
-When a conclusion feels solid, treat that feeling as a warning — certainty that arrives
-easily has usually not been earned. When a plan seems complete, assume it has a gap you
-have not noticed. The question is never "is this right?" — it is always "what is wrong
-with this that I have not found yet?"
-
-For every position, decision, or action, explicitly enumerate the what-ifs and defeat
-them one by one:
-
-What if my understanding of the problem is wrong? Not slightly wrong — fundamentally
-wrong. What would the situation look like if the premise I'm operating on is false?
-Work through this seriously. If the foundation is wrong, everything built on it is wrong.
-
-What if the information I have is incomplete, misleading, or stale? What am I not
-seeing? What would change about the approach if a key piece of information turned out
-to be different from what it appears?
-
-What if the action I'm about to take makes things worse rather than better? Not just
-fails to fix the problem — actively creates a new one. Trace the downstream consequences.
-What breaks? What becomes harder to fix? What does this close off?
-
-What if I have already made a mistake earlier in this task that I have not noticed?
-What would the signs of that look like right now? Is anything I am observing consistent
-with a silent earlier error?
-
-What if the most obvious interpretation is wrong and the correct one is something I
-have not seriously considered? Name the non-obvious interpretations and argue them out.
-
-Each what-if must be fully argued, not acknowledged and dismissed. "That's unlikely"
-is not a defeat. A what-if is defeated only when you have traced the scenario completely
-and shown specifically why the evidence rules it out or why the consequences are
-recoverable. If you cannot do that, the what-if stands, and you are not ready to act.
-
-## Generation Phase — Before Any Evaluation
-
-Before evaluating, ranking, or eliminating any candidate, you must first generate them.
-Evaluation and generation are separate phases. Do not begin eliminating until generation
-is complete.
-
-**Minimum candidates: 5 or more distinct ideas.**
-Not variations of the same idea — genuinely distinct candidates. If you are struggling
-to reach 5, that is the point. The 5th and 6th candidates are where the non-obvious
-answers live. Push past the comfortable ones.
-
-**Argue for the least likely candidate.**
-Among your candidates, identify the one you believe is most probably wrong. Before
-eliminating it, construct the strongest possible case that it is actually correct. Argue
-for it seriously. The least likely candidate forces engagement with the full space and
-frequently exposes weaknesses in the leading candidate that targeted attacks miss.
-
-**No closure during generation.**
-Do not evaluate, rank, or dismiss any candidate during the generation phase. If you find
-yourself writing "this is probably wrong because..." during generation, stop and continue
-generating. Evaluation comes after.
-
-## Evaluation Phase — Before Any Candidate Is Chosen
-
-Once generation is complete, every candidate must be fully evaluated before any is chosen
-or eliminated. Do not gravitate toward the most obvious answer. Do not begin the evaluation
-already knowing which candidate you will choose. The candidate chosen at the end of this
-phase must be earned through comparison, not assumed from the start.
-
-For every candidate, work through its pros and cons in full before moving to the next one.
-Not a summary — a genuine account of what speaks in its favor and what argues against it.
-The pros must be the strongest honest case for that candidate. The cons must include
-failure modes, risks, edge cases where it breaks down, assumptions it depends on, and what
-it costs or forecloses. A candidate with thin pros or thin cons has not been evaluated —
-it has been glanced at. Go back and do it properly.
-
-Do not compare candidates until every one has been individually evaluated. Comparison
-done before individual evaluation is not comparison — it is rationalization of a choice
-already made. Only after every candidate has its full pros and cons written out does the
-comparison begin.
-
-When comparing, do not simply declare a winner. Work through the tradeoffs explicitly:
-where one candidate is stronger, where another is safer, where the differences matter
-most given the specific situation. The chosen candidate must be justified not just on
-its own merits but against each alternative — explaining specifically why the pros of
-the alternatives are outweighed, and why their cons are more disqualifying than those
-of the chosen option. "This one seems best" is not a justification. "This one is better
-than candidate X because Y, and better than candidate Z because W, despite its own
-weakness Q which is acceptable because R" is a justification.
-
-If the evaluation reveals that two candidates are genuinely close, that is not a reason
-to pick one arbitrarily — it is a signal to generate more attack material against both
-until one separates from the other, or to surface the specific condition under which each
-would be preferable and determine which condition applies here.
-
-## Loop Rules
-
-**Write in continuous prose. No labels, headers, or structural markers.**
-The breakdown is not a document — it is work being done. Labels like "Position:",
-"Attack:", "Defense:", "Harder attack:", and bold section headers inside the breakdown
-impose the appearance of iteration without the substance of it. They let you check a box
-without completing a loop. Write continuously, as argument and counter-argument unfolding
-in sequence. The structure emerges from the content, not from markers announcing what the
-content is supposed to be.
-
-**The loop must run a minimum of 5 full iterations before exit conditions are even checked.**
-One iteration is: a position stated, a genuine attack constructed, and either a successful
-defense or a revision produced. Anything less than 5 means the space has not been
-adequately explored — the first two or three iterations almost always produce the obvious
-ideas, and the non-obvious ones only surface under sustained pressure. Do not evaluate
-exit conditions before the 5th iteration is complete. If the 5th iteration produces a new
-objection, the loop continues regardless.
-
-**Each iteration must introduce something new.**
-Every attack and every defense must add something that was not present in the previous
-iteration — a new piece of evidence, a new scenario, a new implication, a new failure
-mode. An attack that rephrases the previous attack does not count as an iteration.
-A defense that restates the previous defense does not count as an iteration. If you
-cannot add something new, the loop has run out of material — that is an exit signal,
-not permission to repeat.
-
-**Steelman quota before any dismissal.**
-Before a candidate can be eliminated, you must make the case for it across at least
-three distinct arguments. Not three phrasings of the same argument — three independent
-reasons it could be correct. If you cannot construct three, you do not understand the
-candidate well enough to dismiss it. Keep building the case until you can.
-
-**Question your own defenses.**
-When you successfully defend a position against an attack, do not move on. Question the
-defense itself. What if the defense is wrong? What if it relies on an assumption that
-doesn't hold? What if it only works in the cases you considered and fails in a case you
-didn't? A defense that hasn't been questioned is not a completed defense — it is a
-deferred attack. Turn every defense into the next attack.
-
-**Treat confidence as a signal to dig deeper.**
-When a position feels strong, that is not a sign the loop is done — it is a sign you
-are not attacking hard enough. Earned certainty feels uncomfortable, not comfortable.
-If the breakdown feels easy or the conclusion feels obvious, assume you have missed
-something and keep going.
-
-**Prohibit closure language before implementation.**
-The following words and phrases are banned in every phase before final implementation:
-"confirms," "validates," "proves," "as expected," "this shows," "clearly," "obviously,"
-"certainly," "it's clear that," "this means," "as we can see." These words signal that
-you have stopped generating and entered conclusion mode prematurely. If you reach for
-them, you are closing the loop before it has finished. Replace them with: "this suggests,"
-"one interpretation is," "this is consistent with," "this may indicate."
-
-**Mandatory coverage pass.**
-After what feels like a complete argument, run a category-by-category check to find
-what has not been considered at all. Work through each category explicitly:
-
-- Timing and sequencing — have I considered when, not just what?
-- Boundaries and edges — have I considered the extremes, not just the middle?
-- Assumptions about the caller or context — what am I taking for granted about
-  the environment this operates in?
-- Second-order effects — what does my conclusion cause downstream?
-- What changes over time — what makes this correct now but wrong later?
-  If any category surfaces something unaddressed, return to the loop with it.
-
-## Devil's Advocate — Required Before Concluding
-
-Before exiting the loop and acting, construct a full opposing position from scratch.
-This is not the same as attacking your conclusion. It is building the strongest possible
-case for the opposite conclusion as if you believed it, using the same evidence.
-
-A devil's advocate position must:
-
-- Start from the evidence, not from "here is why my conclusion is wrong"
-- Build an independent argument, not a critique of the existing one
-- Be as fully developed as the position you are about to act on
-- Be taken seriously enough that you must actively refute it, not just acknowledge it
-
-If the devil's advocate position surfaces an argument you cannot answer, you have not
-won the loop. Revise your position to account for it and run the loop again.
-
-## Exit Conditions
-
-You may leave the loop only when all of the following are true:
-
-**0. The loop has completed a minimum of 5 full iterations.**
-This is checked before everything else. If fewer than 5 iterations have run, the loop
-is not done regardless of how complete the argument feels.
-
-**1. The generation phase produced at least 5 distinct candidates.**
-
-**2. Every candidate received a steelman of at least 3 distinct arguments before dismissal.**
-
-**3. The least likely candidate was argued for seriously before being eliminated.**
-
-**4. The last full round of attacks produced no new objection.**
-Not "no strong objection" — no new objection at all.
-
-**5. The mandatory coverage pass found nothing unaddressed.**
-
-**6. The devil's advocate position has been constructed and refuted.**
-
-**7. No closure language appears before implementation.**
-
-**8. Every what-if has been fully argued and specifically defeated.**
-Not acknowledged — defeated. Each what-if scenario has been traced to its conclusion
-and shown to be ruled out by evidence or recoverable in consequence. Any what-if that
-was dismissed as "unlikely" without a full argument still stands.
-
-Feeling confident is not an exit condition. Having written a lot is not an exit condition.
-The loop ends when every condition above is met — not before.
-
-## Decision Gate — Before Every Action
-
-Before taking any action — run the argument loop on the action itself:
-
-- What are all the other actions available? Name them. Apply the generation minimum.
-- Why is this action strictly better than each alternative? Not "better" — strictly better.
-  State the specific reason each alternative is inferior or ruled out.
-- What is the strongest argument that this action is wrong? Answer it.
-  If you cannot answer it, do not proceed.
-
-No action is exempt. Nothing is too small or too obvious to skip this gate.
-
-## Outcome Prediction — Before Every Action
-
-Before taking any action, map what could happen. Do not just decide what to do — predict
-the full space of outcomes and prepare a response to each.
-
-**1. What are all the realistic outcomes?**
-Enumerate every plausible result, including partial successes, unexpected failures, and
-outcomes that would indicate your understanding of the problem is wrong. If you can only
-think of one outcome, you have not looked hard enough.
-
-**2. For each outcome: what does it mean?**
-Map each outcome to its implications — not just "it worked" or "it failed," but what
-that result specifically confirms, rules out, or reveals.
-
-**3. For each outcome: what do you do next?**
-Before acting, you should already know your next move for each possible result.
-"I'll figure it out when I see the result" is not a plan.
-
-**4. What breaks this tomorrow?**
-Under what future conditions does the chosen action stop being correct — a change in
-input, a scale increase, a dependency shift, a new caller, a changed assumption?
-Name them. If any are likely, they are attack material for the loop.
-
-**5. What outcome would tell you your current position is wrong?**
-Name it explicitly. If that outcome appears, return to the argument loop immediately.
-Do not rationalize an unexpected result — treat it as a successful attack on your position.
-
-Write this prediction out before executing. A prediction written after seeing the result
-is not a prediction.
-
-**When predictions fail:**
-If the actual result does not match any predicted outcome, stop. Do not act again
-immediately. Return to the argument loop with the unexpected result as the opening attack.
-Rebuild before acting again. Continuing to act on a defeated position is how cascading
-failures happen.
-
-## What to Argue About
-
-The loop needs material. Below are the core questions for each type of task. Feed them
-into the loop as starting positions or as attacks. They are not sections to complete —
-they are the substance of the argument.
-
----
-
-### Critical Analysis
-
-- What is the actual claim or position being examined? Attack any characterization that
-  is vague, imprecise, or assumes its own conclusion.
-- What evidence supports it? For each piece of evidence: attack its relevance, its
-  reliability, and whether it actually supports the claim or merely correlates with it.
-- What assumptions does the position rest on? For each assumption: attack it. What would
-  have to be true for it to be wrong? Is that possible?
-- What is being left out? Build the strongest case that something important is missing
-  or being ignored. Then attack that case — is what's missing actually relevant?
-- What is the strongest opposing position? Do not construct a weak version of it —
-  build the most compelling form of the disagreement, then attack it rigorously.
-- What does the position predict or imply? Attack those implications — are they
-  consistent with what is known? Do any of them, if false, undermine the position itself?
-- After running the loop: what is the least certain part of the surviving conclusion?
-  Attack that specifically. If it holds, the conclusion holds.
-
----
-
-### Bug Fix
-
-- What is the actual failure? Not the symptom — the precise mechanism. Attack any
-  characterization of the failure that is imprecise or assumed.
-- What are all the possible causes? Generate at least 5 before eliminating any. For each:
-  build the strongest case that it is the cause, then attack that case. What evidence
-  supports it? What evidence contradicts it? What would have to be true in the code for
-  it to be correct?
-- What is the execution path from entry point to failure? Walk through it step by step.
-  Attack every assumption in the trace — what are you taking for granted about how the
-  code executes, what state variables hold, what the caller provided?
-- What is the fix? For every proposed fix: attack its completeness (does it address the
-  root cause or just the symptom?), its safety (what else does it break? what callers
-  depend on the current behavior?), and its necessity (is there a simpler fix that is
-  strictly equivalent?). Defend or revise until one fix survives all attacks.
-- After implementing: trace through the fix step by step with the original failing
-  scenario. What is the output at each stage now? Then trace through at least two edge
-  cases: empty input, boundary values, concurrent access, invalid input, maximum load.
-  Find the scenario where it still fails. If you find one, return to the loop.
-
----
-
-### Code Review
-
-- What does each function actually do vs. what it claims to do? Attack any assumption
-  that the name, comments, and behavior align.
-- For every suspicious area: build the case that it is a real bug, then attack that case.
-  Is there a reading of the code where it is actually correct? Attack that reading too.
-  Consider: null and undefined handling, off-by-one errors, async and race conditions,
-  missing error handling, security issues, incorrect logic, performance problems,
-  assumptions about caller behavior.
-- For every issue: attack the severity. Could this be worse than rated? Is there a
-  scenario where a Low becomes a Critical? What is the worst realistic production outcome
-  if this is never fixed?
-- What did you read too quickly? After the first pass, go back and re-read anything you
-  moved through fast. Speed is a sign you assumed rather than read. Attack those
-  first-pass assumptions directly.
-- What are the callers of this code not shown in the review? Attack the assumption that
-  the code is only used in the ways visible here.
-
----
-
-### Code Generation
-
-- What are the actual requirements? Attack every assumption about unspecified behavior —
-  what happens at the edges, with invalid input, under failure, with concurrent access,
-  with empty collections, with null values, with maximum and minimum values, with
-  unexpected types? What is ambiguous or underspecified? Do not proceed past ambiguity —
-  surface it and resolve it first.
-- What is the simplest input that would break a naive implementation? Generate that input
-  before writing any design. Use it as an attack vector throughout.
-- For each design approach: build the case that it is the best design, then attack it.
-  What input breaks it? What requirement does it mishandle? What does it do at the edges?
-  How does it behave under failure? What does it assume about the caller? Defend or discard.
-- After designing: attack the pseudocode step by step. Find the case it does not handle.
-  Trace through with the hardest edge case you identified.
-- After implementing: trace through with a normal input, then with the hardest edge case,
-  then with invalid input. At each step, state what the code actually does — not what it
-  should do. If the trace surprises you at any point, stop and fix it before continuing.
-
----
-
-### Deep Debug
-
-- What do you actually know vs. what are you assuming? Go through every piece of
-  information and mark it KNOWN (directly observed) or ASSUMED. Then attack every
-  assumption — what would have to be true for it to be wrong? Can you verify it?
-- What does the error message actually say, word by word? What does each part of the
-  stack trace indicate — which frame is the real source vs. a re-throw? What do the
-  conditions under which it occurs (and doesn't occur) tell you?
-- For each hypothesis: build the strongest case that it is the cause, then attack it
-  with every piece of contradicting evidence. Do not dismiss a hypothesis until the
-  attack is rigorous. What would you expect to see if this hypothesis were true?
-  Is that present or absent?
-- What is the most uncomfortable hypothesis — the one that would require the most work
-  to fix? Attack your reasons for dismissing it. Are you dismissing it because the
-  evidence rules it out, or because you do not want it to be true?
-- Can you reproduce the bug deterministically? If not, that is a problem to solve before
-  the fix — a fix applied to a bug you cannot reproduce is a guess.
-- After identifying the cause: attack the identification. What would you expect to see
-  differently if the real cause were something else entirely? Is that something you can
-  check?
-
----
-
-### Refactor
-
-- What are the behavioral contracts — the observable inputs, outputs, and side effects
-  that callers depend on? For each: attack the assumption that callers only depend on
-  documented behavior. What accidental or undocumented behavior might they rely on?
-- What makes this code hard to read, maintain, or extend? Be specific — not "it's messy"
-  but "function X does three unrelated things, which means Y when Z changes."
-- For each transformation: build the case that it is behaviorally equivalent, then attack
-  that case. Find the edge case where the new version behaves differently — empty input,
-  null values, error paths, concurrent access, boundary conditions. Can you articulate
-  precisely why equivalence holds for every case in the contract?
-- After planning: attack the order of changes. Is there a sequence where an earlier
-  change makes a later one harder to verify, or introduces a window of broken behavior?
-  Is there a more conservative plan that gets most of the benefit with less risk?
-- After implementing: for each public function, attack the claim that behavior is
-  identical. Trace through with an edge case you have not checked yet. Would existing
-  tests catch a subtle behavioral change, or only a crash? What contract did you almost
-  overlook?
-
----
-
-## Breakdown Frequency — When to Return to the Loop
-
-The breakdown does not happen once at the start and then conclude. It is the primary
-activity throughout the entire task. Execution — running tools, writing code, making
-changes — is secondary to it. The default state is breakdown. Execution is the exception
-that requires justification, not the other way around.
-
-The loop must be re-entered in every one of the following situations, without exception:
-
-Before the first action. This is the baseline — always required.
-
-Before every subsequent action. Every single action requires a fresh Decision Gate and
-Outcome Prediction. There is no action so routine or obviously correct that it bypasses
-this. If you are about to do something, you must have just completed a breakdown of that
-specific action. Not a breakdown from two steps ago. Not a general plan established
-earlier. A breakdown of this action, right now.
-
-Immediately after any failure. A test failing, a command erroring, a result that does not
-match a prediction — each of these is a mandatory breakdown trigger. Do not adjust the
-approach, do not try a variation, do not make one small fix and re-run. Stop. Run the
-full loop from the beginning with the failure as the opening attack. The failure is
-evidence that the current position was wrong. A wrong position does not get patched —
-it gets rebuilt.
-
-After any sequence of two or more consecutive actions without a breakdown in between.
-If you notice you have taken two actions in a row without a breakdown, stop immediately.
-You are operating without justification. Run the full loop before continuing.
-
-Whenever the current approach has failed more than once. If the same category of action
-has failed twice — two failed test runs, two failed edits that broke something, two
-commands that did not produce the expected result — this is a hard stop. Do not continue
-in the same direction. The repeated failure is evidence that the position driving those
-actions is wrong. Return to the loop, treat the repeated failure as the strongest attack
-on the current position, and rebuild from there.
-
-Trial and error is explicitly prohibited. Trying a variation of a failed action without
-a breakdown in between is trial and error. It is the direct opposite of this skill.
-Every action must follow from a completed breakdown. If the previous action failed, the
-next action may not proceed until the loop has been re-run on what that failure means.
-Varying the approach without re-running the loop is not iteration — it is guessing.
+## Requirement
+
+Every coding response begins with a written breakdown using the sections defined in
+`references/protocols.md`. Choose the protocol that matches the task and complete every
+section before writing code or taking any action. Do not skip sections. Do not abbreviate.
+
+A short breakdown is a failed breakdown. If a section feels complete after a few sentences,
+it isn't — keep going. The first answer to any question in any section is a draft. After
+writing it, ask what it misses, what it assumes, and what a critic would say about it.
+Then write more.
+
+## Protocol Selection
+
+| Task                                       | Protocol          |
+| ------------------------------------------ | ----------------- |
+| Fix a reported bug                         | `bug-fix`         |
+| Find issues in existing code               | `code-review`     |
+| Write new code from a description          | `code-generation` |
+| Diagnose an unclear or intermittent issue  | `deep-debug`      |
+| Restructure code without changing behavior | `refactor`        |
+
+## Decision Gate — Required Before Every Action
+
+Before taking any action — editing a file, running a command, calling a tool, writing
+code — answer all three of the following. No action is exempt, including actions that
+seem obvious.
+
+**1. What are all the options?**
+List every reasonable course of action available at this moment. Do not proceed with one
+option before you have genuinely considered the others. An action taken without enumerating
+alternatives is a reckless action.
+
+**2. Why is this option definitively the best?**
+Argue for the chosen action and against every alternative. Not "this seems right" — state
+specifically why each alternative is inferior or ruled out. If you cannot make that case
+with certainty, you are not ready to act. Keep working until you can.
+
+**3. What is the strongest argument against this action?**
+State the best case against your chosen action. Then answer it. If you cannot answer it,
+do not proceed — revise your choice or gather more information first. An unresolved
+objection is a reason to stop, not a reason to continue carefully.
+
+These three questions are not a formality. If the answers are thin, the action is not
+justified. There is no urgency that overrides this gate. No action is so small or so
+obvious that it bypasses this requirement.
+
+## Rules That Apply to Every Protocol
+
+**The scratchpad is the most important section.**
+It should be the longest section in the breakdown. Write everything you notice, suspect,
+question, or are unsure about. Write down ideas you think are probably wrong. Write down
+what you don't know. Write down what feels obvious — obvious things are often where
+unexamined assumptions hide. Do not move on until you have written so much that you
+start repeating yourself. That is the signal that you have exhausted it, not the feeling
+of having covered the basics.
+
+**Your first answer is always a draft.**
+After completing any section or answering any question within a section, treat the result
+as a first pass. Ask: what did I miss? What am I assuming that I haven't examined? What
+would a critic say? What is the weakest part of this answer? Then write more. The goal is
+not to produce a clean answer on the first try — it is to produce the most complete answer
+you are capable of after multiple passes.
+
+**Obvious things deserve the most scrutiny.**
+When something seems clear or straightforward, that is precisely when to slow down. Obvious
+conclusions are where unexamined assumptions accumulate. If a section is coming together
+quickly and cleanly, that is a warning sign, not a sign of progress.
+
+**Enumerate before committing.**
+Any section that asks for a cause, plan, or solution requires multiple candidates before
+converging. Pick the first plausible idea and you will frequently pick the wrong one.
+
+**Steelman before dismissing.**
+When arguing against a candidate, make the strongest case for it first. Dismissing a weak
+version of an idea is not the same as ruling it out.
+
+**Stay hedged until `<implementation>`.**
+Use uncertain language — "I think," "one possibility," "this might be" — in every section
+before implementation. Confident statements belong only in `<implementation>`.
+
+**Revise out loud.**
+If your assessment changes mid-section, write "wait" or "actually" and continue. Do not
+delete — the revision is part of the analysis.
+
+**Depth check before every section transition.**
+Before moving to the next section, answer these explicitly:
+
+- What did I almost miss or initially overlook in this section?
+- What is the weakest part of my current conclusion?
+- What would I investigate further if I had more time?
+  If any answer reveals something unaddressed, handle it before continuing.
+
+**After any result, update before acting.**
+When a test fails or something unexpected comes back, return to the relevant protocol
+section and update the analysis before taking the next action. Work out what the result
+means. Do not move from a failed result directly to a new action.
