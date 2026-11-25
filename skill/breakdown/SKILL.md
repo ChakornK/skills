@@ -18,8 +18,11 @@ replace analysis with a checklist of one-line answers or inflate it with repetit
 1. **Task and evidence:** State the requested outcome, constraints, observed facts, and important
    unknowns. Separate what is given from what is assumed.
 2. **Scratchpad:** Surface task-specific uncertainties, assumptions to check, plausible failure
-   cases, and details that may have been overlooked. Use these to generate candidate approaches;
-   do not treat this as a box to fill before moving on.
+   cases, and details that may have been overlooked. For each important assumption behind the leading
+   idea, ask how it could be false and what evidence would reveal that. Construct the strongest
+   credible counterexample or alternative explanation you can, then compare it with the evidence and
+   record whether it changes the approach or remains an unresolved risk. Use these challenges to
+   generate or revise candidates; do not treat the scratchpad as a box to fill before moving on.
 3. **Iterate:** Develop a promising candidate, then challenge it with the strongest relevant
    counterexample, edge case, or opposing interpretation. Explain what the challenge changes. If it
    exposes a material weakness, revise the candidate and challenge the revision. If it does not,
@@ -55,6 +58,17 @@ Use the matching task-specific questions below. For tasks without a matching row
 closest protocol and adapt it to the task.
 
 ## Rules That Apply to Every Protocol
+
+**Treat the current position as provisional.**
+Ask what evidence, assumption, or overlooked scenario could make it wrong. Identify at least one
+credible way the leading approach could fail, and test that possibility against the available
+evidence. If the challenge holds, revise the approach; if it does not, explain why and retain any
+uncertainty that remains. Do not mistake confidence for evidence, and do not keep searching once
+further challenges add no material information.
+
+In the scratchpad, make this self-challenge visible: state the assumption, the strongest plausible
+counterexample or alternative, the evidence for and against it, and its effect on the current
+approach. Avoid generic doubts that cannot be tied to the task or checked against evidence.
 
 **Keep the breakdown evidence-led.**
 Revisit assumptions when new evidence challenges them. Add analysis when it reveals a material
