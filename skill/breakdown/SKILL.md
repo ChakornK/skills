@@ -30,6 +30,14 @@ Before taking action or presenting a conclusion, complete these steps in order. 
 headings so coverage is clear. Write enough task-specific detail to support each step; do not
 replace analysis with a checklist of one-line answers or inflate it with repetition.
 
+Write the breakdown as connected prose. Do not use Markdown headings, bolded subject labels, or
+section-title formatting within it. Incorporate every required element naturally into the prose,
+including the mental model and exact pre-action code trace; describe the code's inputs, outputs,
+line-by-line behavior, and value-level execution without announcing them with a formatted label. Keep
+challenges and revisions connected to the evidence and show how they change, support, or limit the
+approach. This is visible engineering analysis, not a stream of private thoughts. The no-header style
+does not waive, shorten, or replace any required breakdown element.
+
 1. **Task and evidence:** State the requested outcome, constraints, observed facts, and important
    unknowns. Separate what is given from what is assumed.
 2. **Risks and assumptions:** Question the current understanding, not just the proposed fix. Identify
