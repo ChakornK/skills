@@ -19,6 +19,7 @@ optional advice. Do not replace, summarize away, or bypass its required steps wi
 |---|---|---|
 | **Exploration** | generate ideas, options, concepts, approaches, or recommendations | `references/exploration.md` |
 | **Execution** | implement, debug, review, or refactor a specified outcome | `references/execution.md` |
+| **Communication** | write, draft, revise, or structure creative, academic, technical, or public-facing content | `references/communication.md` |
 
 If a request genuinely combines both types, read and follow both references, applying each workflow to
 the relevant part of the task.
