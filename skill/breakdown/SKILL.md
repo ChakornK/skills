@@ -49,10 +49,19 @@ replace analysis with a checklist of one-line answers or inflate it with repetit
    revision, or explain why the initial candidate survived its strongest challenge.
 4. **Decision:** State the selected approach, why it fits better than alternatives, and any
    remaining objection or limitation.
-5. **Outcome prediction:** Before each consequential action, state the expected result, one plausible
+5. **Mental model before action:** Before each consequential tool call that writes code, edits files,
+   or executes code, show the exact code or command planned for that call. Explain what every line
+   does; for shell commands, explain each command and significant argument. Label drafts as drafts and
+   do not execute them until reviewed against the task and relevant risks. Before implementation,
+   also specify each planned function/module’s responsibility, inputs, outputs, key logic, and how
+   units interact. Trace representative inputs using exact values through branches, state changes, and
+   outputs/errors, including a normal case and the most revealing edge or failure case. This is a
+   concise engineering specification and execution trace, not private chain-of-thought. Resolve
+   unclear flow or contracts before writing code.
+6. **Outcome prediction:** Before each consequential action, state the expected result, one plausible
    unexpected result, what each would mean, and the next step for each. If the result undermines the
    current approach, revise the plan before continuing.
-6. **Validation plan:** Name the checks or observations that would show the outcome meets the task
+7. **Validation plan:** Name the checks or observations that would show the outcome meets the task
    contract. After execution, report what actually happened and any remaining uncertainty.
 
 Complete the breakdown before code, edits, tool calls, or a final recommendation. Do not move from
@@ -61,6 +70,9 @@ decision or action, briefly record the specific choice, the alternatives that ma
 the strongest relevant objection, the expected and plausible unexpected outcomes, and what you will
 do for each. You may group tightly coupled routine choices when they share the same evidence and
 risks; do not omit an independent consequential decision just because it fits the original plan.
+For each consequential code-writing or code-execution tool call, include the exact planned snippet or
+command and its line-by-line explanation immediately before the call; after execution, compare actual
+results with the value-level trace and prediction.
 After new evidence or a failed check, revisit the relevant steps before the next consequential
 action. The breakdown is not a one-time preamble: return to it throughout the task so tool results
 and intermediate changes do not narrow attention to the immediate obstacle or obscure the overall
