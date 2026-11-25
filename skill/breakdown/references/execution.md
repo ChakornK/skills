@@ -4,13 +4,10 @@ Before taking action or presenting a conclusion, complete these steps in order. 
 headings so coverage is clear. Write enough task-specific detail to support each step; do not
 replace analysis with a checklist of one-line answers or inflate it with repetition.
 
-Write the breakdown as connected prose. Do not use Markdown headings, bolded subject labels, or
-section-title formatting within it. Incorporate every required element naturally into the prose,
-including the mental model and exact pre-action code trace; describe the code's inputs, outputs,
-line-by-line behavior, and value-level execution without announcing them with a formatted label. Keep
-challenges and revisions connected to the evidence and show how they change, support, or limit the
-approach. This is visible engineering analysis, not a stream of private thoughts. The no-header style
-does not waive, shorten, or replace any required breakdown element.
+Use the format that makes the Execution breakdown easiest to inspect. Markdown headings, lists, tables,
+and fenced code or command blocks are permitted. Include every required element, connect challenges and
+revisions to evidence, and show how they change, support, or limit the approach. This is visible
+engineering analysis, not a stream of private thoughts; formatting does not waive any required element.
 
 1. **Task and evidence:** State the requested outcome, constraints, observed facts, and important
    unknowns. Separate what is given from what is assumed.
@@ -31,18 +28,10 @@ does not waive, shorten, or replace any required breakdown element.
    revision, or explain why the initial candidate survived its strongest challenge.
 4. **Decision:** State the selected approach, why it fits better than alternatives, and any
    remaining objection or limitation.
-5. **Mental model before action:** Before each consequential tool call that writes code, edits files,
-   or executes code, show the exact code or command planned for that call. Explain what every line
-   does; for shell commands, explain each command and significant argument. Label drafts as drafts and
-   do not execute them until reviewed against the task and relevant risks. Before implementation,
-   also specify each planned function/module’s responsibility, inputs, outputs, key logic, and how
-   units interact. Trace representative inputs using exact values through branches, state changes, and
-   outputs/errors, including a normal case and the most revealing edge or failure case. This is an engineering specification and execution trace, not private chain-of-thought. Resolve
-   unclear flow or contracts before writing code.
-6. **Outcome prediction:** Before each consequential action, state the expected result, one plausible
+5. **Outcome prediction:** Before each consequential action, state the expected result, one plausible
    unexpected result, what each would mean, and the next step for each. If the result undermines the
    current approach, revise the plan before continuing.
-7. **Validation plan:** Name the checks or observations that would show the outcome meets the task
+6. **Validation plan:** Name the checks or observations that would show the outcome meets the task
    contract. After execution, report what actually happened and any remaining uncertainty.
 
 Complete the breakdown before code, edits, tool calls, or a final recommendation. Do not move from
@@ -51,14 +40,25 @@ decision or action, briefly record the specific choice, the alternatives that ma
 the strongest relevant objection, the expected and plausible unexpected outcomes, and what you will
 do for each. You may group tightly coupled routine choices when they share the same evidence and
 risks; do not omit an independent consequential decision just because it fits the original plan.
-For each consequential code-writing or code-execution tool call, include the exact planned snippet or
-command and its line-by-line explanation immediately before the call; after execution, compare actual
-results with the value-level trace and prediction.
+After each write, edit, or patch call, compare actual results with the pre-call trace and prediction.
 After new evidence or a failed check, revisit the relevant steps before the next consequential
 action. The breakdown is not a one-time preamble: return to it throughout the task so tool results
 and intermediate changes do not narrow attention to the immediate obstacle or obscure the overall
 goal. Keep it proportional: address each required point with task-specific evidence; do not replace
 the breakdown with terse labels or repeat material that adds no new information.
+
+## Mandatory Mental Model Before Every Write/Edit/Patch Tool Call
+
+This is a repeated pre-action requirement, not a step completed in the initial planning breakdown.
+BEFORE EVERY SINGLE USE OF A WRITE, EDIT, OR PATCH TOOL, show the exact snippet of code you are going to
+write in a Markdown fenced code block. Immediately after that block, explain line by line what the code
+does, including exact traced mock values through relevant branches, state changes, outputs, and errors.
+For shell commands, explain every command and significant argument and trace exact mock inputs and
+expected effects. Before implementation, specify each planned function/module’s responsibility, inputs,
+outputs, key logic, and interactions. Do not call the write/edit/patch tool until the code block,
+line-by-line explanation, and trace have been shown to the user. Repeat this entire pre-call procedure
+for every such tool call; a prior explanation does not satisfy a later call. Label drafts as drafts and
+do not execute unreviewed code. This is an engineering specification, not private chain-of-thought.
 
 ## Protocol Selection
 
