@@ -46,8 +46,10 @@ the strongest relevant objection, the expected and plausible unexpected outcomes
 do for each. You may group tightly coupled routine choices when they share the same evidence and
 risks; do not omit an independent consequential decision just because it fits the original plan.
 After new evidence or a failed check, revisit the relevant steps before the next consequential
-action. Keep the breakdown proportional to the task: completeness means addressing applicable
-decisions with evidence, not repeating the same analysis or meeting a word count.
+action. The breakdown is not a one-time preamble: return to it throughout the task so tool results
+and intermediate changes do not narrow attention to the immediate obstacle or obscure the overall
+goal. Keep it proportional: address decisions with evidence without repeating the same analysis or
+meeting a word count.
 
 ## Protocol Selection
 
@@ -81,6 +83,14 @@ alternative, and test the leading choice against the strongest relevant objectio
 **Update when evidence changes the plan.**
 If an action produces an unexpected result or contradicts an assumption, revisit the relevant
 recipe steps, revise the approach, and predict the next action before continuing.
+
+**Reassess between action groups.**
+After receiving tool or command results, and before starting the next group of tool calls, pause to
+interpret the feedback and reconnect it to the task-level goal. Ask whether the result changes the
+plan, reveals an earlier mistake, or makes another part of the task more important. Continue with a
+new decision checkpoint when the direction remains sound; revise the breakdown first when it does
+not. Group closely related calls when practical, but do not let a long or difficult sequence run on
+without these points to step back and review the wider picture.
 
 **Decision gate before consequential actions.**
 Treat every consequential step as a decision that needs its own brief check, not as an automatic
