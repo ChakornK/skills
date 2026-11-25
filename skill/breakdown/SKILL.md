@@ -17,16 +17,17 @@ replace analysis with a checklist of one-line answers or inflate it with repetit
 
 1. **Task and evidence:** State the requested outcome, constraints, observed facts, and important
    unknowns. Separate what is given from what is assumed.
-2. **Scratchpad:** Surface task-specific uncertainties, assumptions to check, plausible failure
-   cases, and details that may have been overlooked. For each important assumption behind the leading
-   idea, ask how it could be false and what evidence would reveal that. Construct the strongest
-   credible counterexample or alternative explanation you can, then compare it with the evidence and
-   record whether it changes the approach or remains an unresolved risk. Use these challenges to
-   generate or revise candidates; do not treat the scratchpad as a box to fill before moving on.
+2. **Risks and assumptions:** Question the current understanding, not just the proposed fix. Identify
+   ambiguous requirements, important assumptions, plausible failure cases, and details that may have
+   been overlooked. For each consequential uncertainty, consider how it could be wrong, what evidence
+   would reveal that, and whether it changes the approach. Construct the strongest credible
+   counterexample or alternative explanation for the leading idea. Explain how material risks will
+   be addressed or tested. Keep this specific to the task rather than listing generic what-ifs.
 3. **Iterate:** Develop a promising candidate, then challenge it with the strongest relevant
    counterexample, edge case, or opposing interpretation. Explain what the challenge changes. If it
    exposes a material weakness, revise the candidate and challenge the revision. If it does not,
-   explain why using task evidence. Update the scratchpad when a new concern or assumption emerges.
+   explain why using task evidence. Update the risks and assumptions analysis when new concerns
+   emerge.
    Continue while a materially different candidate or unresolved challenge could change the choice;
    stop when another pass would only repeat what is already addressed. Make at least one meaningful
    revision, or explain why the initial candidate survived its strongest challenge.
@@ -38,10 +39,15 @@ replace analysis with a checklist of one-line answers or inflate it with repetit
 6. **Validation plan:** Name the checks or observations that would show the outcome meets the task
    contract. After execution, report what actually happened and any remaining uncertainty.
 
-Complete the breakdown before code, edits, tool calls, or a final recommendation. After new evidence
-or a failed check, revisit the relevant steps before taking the next consequential action. Keep the
-breakdown proportional to the task: completeness means addressing applicable steps with evidence,
-not meeting a word count.
+Complete the breakdown before code, edits, tool calls, or a final recommendation. Do not move from
+the task-level breakdown straight into a sequence of unexamined choices. Before each consequential
+decision or action, briefly record the specific choice, the alternatives that matter at that point,
+the strongest relevant objection, the expected and plausible unexpected outcomes, and what you will
+do for each. You may group tightly coupled routine choices when they share the same evidence and
+risks; do not omit an independent consequential decision just because it fits the original plan.
+After new evidence or a failed check, revisit the relevant steps before the next consequential
+action. Keep the breakdown proportional to the task: completeness means addressing applicable
+decisions with evidence, not repeating the same analysis or meeting a word count.
 
 ## Protocol Selection
 
@@ -59,16 +65,10 @@ closest protocol and adapt it to the task.
 
 ## Rules That Apply to Every Protocol
 
-**Treat the current position as provisional.**
-Ask what evidence, assumption, or overlooked scenario could make it wrong. Identify at least one
-credible way the leading approach could fail, and test that possibility against the available
-evidence. If the challenge holds, revise the approach; if it does not, explain why and retain any
-uncertainty that remains. Do not mistake confidence for evidence, and do not keep searching once
-further challenges add no material information.
-
-In the scratchpad, make this self-challenge visible: state the assumption, the strongest plausible
-counterexample or alternative, the evidence for and against it, and its effect on the current
-approach. Avoid generic doubts that cannot be tied to the task or checked against evidence.
+**Challenge assumptions with task-specific risks.**
+For each important ambiguity or assumption, state a plausible alternative, how it could affect the
+outcome, and what evidence or test would distinguish it. Address the risks that could change the
+decision; record residual uncertainty without expanding into generic speculation.
 
 **Keep the breakdown evidence-led.**
 Revisit assumptions when new evidence challenges them. Add analysis when it reveals a material
@@ -81,6 +81,14 @@ alternative, and test the leading choice against the strongest relevant objectio
 **Update when evidence changes the plan.**
 If an action produces an unexpected result or contradicts an assumption, revisit the relevant
 recipe steps, revise the approach, and predict the next action before continuing.
+
+**Decision gate before consequential actions.**
+Treat every consequential step as a decision that needs its own brief check, not as an automatic
+continuation of the initial plan. Name the realistic alternatives for that step, explain why the
+selected one fits the current evidence, identify the strongest concern against it, and predict what
+you expect and what result would make you change course. After observing the result, compare it with
+the prediction before choosing the next step. Group only routine, tightly coupled actions whose
+risks and expected outcomes are materially the same.
 
 ### Critical Analysis
 
