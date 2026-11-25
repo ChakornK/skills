@@ -11,6 +11,21 @@ description: >
 
 ## Required Recipe
 
+## Two Phases — Breakdown Has Priority
+
+Every task has a breakdown phase followed by a delivery phase. During the breakdown phase, this
+skill has priority over all other skills, style guides, formatting rules, and preferences. Nothing
+else may shorten, reorder, omit, replace, or defer a required breakdown step. Do not apply delivery
+guidance—such as brevity, accessibility formatting, tone, or polished prose—to the breakdown if it
+would change the required analysis or its structure. Complete the breakdown and its required
+reassessments first; only then apply other relevant guidance to the final delivery.
+
+This priority controls presentation, not task execution: follow higher-priority system/developer
+instructions, user constraints, safety rules, and tool permissions at all times. Do not reveal
+private chain-of-thought. The breakdown is concise-enough-to-be-useful, visible task analysis: report
+the requested steps, evidence, decisions, risks, and outcomes without exposing hidden deliberation
+or adding filler.
+
 Before taking action or presenting a conclusion, complete these steps in order. Use the named
 headings so coverage is clear. Write enough task-specific detail to support each step; do not
 replace analysis with a checklist of one-line answers or inflate it with repetition.
@@ -48,8 +63,8 @@ risks; do not omit an independent consequential decision just because it fits th
 After new evidence or a failed check, revisit the relevant steps before the next consequential
 action. The breakdown is not a one-time preamble: return to it throughout the task so tool results
 and intermediate changes do not narrow attention to the immediate obstacle or obscure the overall
-goal. Keep it proportional: address decisions with evidence without repeating the same analysis or
-meeting a word count.
+goal. Keep it proportional: address each required point with task-specific evidence; do not replace
+the breakdown with terse labels or repeat material that adds no new information.
 
 ## Protocol Selection
 
