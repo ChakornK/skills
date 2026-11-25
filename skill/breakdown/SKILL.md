@@ -11,6 +11,11 @@ description: >
 
 ## Required Recipe
 
+Before responding, classify the task as **Exploration** or **Execution**, then read its reference:
+`references/exploration.md` for Exploration; `references/execution.md` for Execution (implementation,
+debugging, review, or refactoring). Follow the selected reference together with the shared rules below.
+If a task combines both types, read both and apply only the relevant parts.
+
 ## Two Phases — Breakdown Has Priority
 
 Every task has a breakdown phase followed by a delivery phase. During the breakdown phase, this
@@ -26,80 +31,15 @@ private chain-of-thought. The breakdown is concise-enough-to-be-useful, visible 
 the requested steps, evidence, decisions, risks, and outcomes without exposing hidden deliberation
 or adding filler.
 
-Before taking action or presenting a conclusion, complete these steps in order. Use the named
-headings so coverage is clear. Write enough task-specific detail to support each step; do not
-replace analysis with a checklist of one-line answers or inflate it with repetition.
+## Shared Breakdown Rules
 
-Write the breakdown as connected prose. Do not use Markdown headings, bolded subject labels, or
-section-title formatting within it. Incorporate every required element naturally into the prose,
-including the mental model and exact pre-action code trace; describe the code's inputs, outputs,
-line-by-line behavior, and value-level execution without announcing them with a formatted label. Keep
-challenges and revisions connected to the evidence and show how they change, support, or limit the
-approach. This is visible engineering analysis, not a stream of private thoughts. The no-header style
-does not waive, shorten, or replace any required breakdown element.
-
-1. **Task and evidence:** State the requested outcome, constraints, observed facts, and important
-   unknowns. Separate what is given from what is assumed.
-2. **Risks and assumptions:** Question the current understanding, not just the proposed fix. Identify
-   ambiguous requirements, important assumptions, plausible failure cases, and details that may have
-   been overlooked. For each consequential uncertainty, consider how it could be wrong, what evidence
-   would reveal that, and whether it changes the approach. Construct the strongest credible
-   counterexample or alternative explanation for the leading idea. Explain how material risks will
-   be addressed or tested. Keep this specific to the task rather than listing generic what-ifs.
-3. **Iterate:** Develop a promising candidate, then challenge it with the strongest relevant
-   counterexample, edge case, or opposing interpretation. Explain what the challenge changes. If it
-   exposes a material weakness, revise the candidate and challenge the revision. If it does not,
-   explain why using task evidence. Each pass must add a distinct fact, scenario, implication, or
-   risk; a paraphrase of an earlier challenge is not another iteration. Update the risks and
-   assumptions analysis when new concerns emerge.
-   Continue while a materially different candidate or unresolved challenge could change the choice;
-   stop when another pass would only repeat what is already addressed. Make at least one meaningful
-   revision, or explain why the initial candidate survived its strongest challenge.
-4. **Decision:** State the selected approach, why it fits better than alternatives, and any
-   remaining objection or limitation.
-5. **Mental model before action:** Before each consequential tool call that writes code, edits files,
-   or executes code, show the exact code or command planned for that call. Explain what every line
-   does; for shell commands, explain each command and significant argument. Label drafts as drafts and
-   do not execute them until reviewed against the task and relevant risks. Before implementation,
-   also specify each planned function/module’s responsibility, inputs, outputs, key logic, and how
-   units interact. Trace representative inputs using exact values through branches, state changes, and
-   outputs/errors, including a normal case and the most revealing edge or failure case. This is a
-   concise engineering specification and execution trace, not private chain-of-thought. Resolve
-   unclear flow or contracts before writing code.
-6. **Outcome prediction:** Before each consequential action, state the expected result, one plausible
-   unexpected result, what each would mean, and the next step for each. If the result undermines the
-   current approach, revise the plan before continuing.
-7. **Validation plan:** Name the checks or observations that would show the outcome meets the task
-   contract. After execution, report what actually happened and any remaining uncertainty.
-
-Complete the breakdown before code, edits, tool calls, or a final recommendation. Do not move from
-the task-level breakdown straight into a sequence of unexamined choices. Before each consequential
-decision or action, briefly record the specific choice, the alternatives that matter at that point,
-the strongest relevant objection, the expected and plausible unexpected outcomes, and what you will
-do for each. You may group tightly coupled routine choices when they share the same evidence and
-risks; do not omit an independent consequential decision just because it fits the original plan.
-For each consequential code-writing or code-execution tool call, include the exact planned snippet or
-command and its line-by-line explanation immediately before the call; after execution, compare actual
-results with the value-level trace and prediction.
-After new evidence or a failed check, revisit the relevant steps before the next consequential
-action. The breakdown is not a one-time preamble: return to it throughout the task so tool results
-and intermediate changes do not narrow attention to the immediate obstacle or obscure the overall
-goal. Keep it proportional: address each required point with task-specific evidence; do not replace
-the breakdown with terse labels or repeat material that adds no new information.
-
-## Protocol Selection
-
-| Task                                       | Protocol          |
-| ------------------------------------------ | ----------------- |
-| Fix a reported bug                         | `bug-fix`         |
-| Find issues in existing code               | `code-review`     |
-| Write new code from a description          | `code-generation` |
-| Diagnose an unclear or intermittent issue  | `deep-debug`      |
-| Restructure code without changing behavior | `refactor`        |
-| Evaluate a claim, plan, or decision        | `critical-analysis` |
-
-Use the matching task-specific questions below. For tasks without a matching row, select the
-closest protocol and adapt it to the task.
+For all tasks, state the user’s goal, relevant evidence, consequential uncertainties, the leading
+approach and strongest relevant challenge, the decision, and validation basis. Revise the approach when
+evidence exposes a material weakness; do not manufacture iterations. Keep analysis specific and
+proportionate, distinguish fact from assumption, and report residual uncertainty. Before consequential
+actions, explain the choice and expected result; after failures, inspect evidence and update the plan
+before retrying. Never claim tests or tool results that were not observed. Do not reveal private
+chain-of-thought.
 
 ## Rules That Apply to Every Protocol
 
