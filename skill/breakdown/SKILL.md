@@ -1,18 +1,19 @@
 ---
 name: breakdown
 description: >
-  Problem breakdown framework for coding tasks. Use this skill for any coding task:
-  bug fixing, code review, writing new code, debugging intermittent issues, or refactoring.
-  Requires a thorough written analysis using structured sections before any code or action.
+  Problem breakdown framework for all tasks, big or small. Use this skill for any task:
+  coding, analysis, planning, decision-making, writing, debugging, reviewing, or any
+  situation that benefits from rigorous self-challenge before acting or concluding.
+  Forces sustained adversarial self-argument until a position survives all challenges.
 ---
 
 # Breakdown
 
 ## Requirement
 
-Every coding response begins with a written breakdown. Choose the protocol that matches the
-task from the table below and complete every section before writing code or taking any action.
-Do not skip sections. Do not abbreviate.
+Every response begins with a written breakdown. Choose the protocol that matches the task
+from the table below and complete every applicable section before taking action or reaching
+a conclusion. Do not skip sections. Do not abbreviate.
 
 A short breakdown is a failed breakdown. If a section feels complete after a few sentences,
 it isn't — keep going. The first answer to any question in any section is a draft. After
@@ -28,14 +29,16 @@ Then write more.
 | Write new code from a description          | `code-generation` |
 | Diagnose an unclear or intermittent issue  | `deep-debug`      |
 | Restructure code without changing behavior | `refactor`        |
+| Evaluate a claim, plan, or decision        | `critical-analysis` |
 
-Use the matching task-specific checks in the section below.
+Use the matching task-specific checks in the section below. For tasks without a matching row,
+select the closest protocol and adapt it to the task.
 
 ## Decision Gate — Required Before Every Action
 
-Before taking any action — editing a file, running a command, calling a tool, writing
-code — answer all three of the following. No action is exempt, including actions that
-seem obvious.
+Before taking any action or delivering any conclusion — editing a file, running a command,
+calling a tool, writing code, or reporting a result — answer all three of the following. No
+action or conclusion is exempt, including ones that seem obvious.
 
 **1. What are all the options?**
 List every reasonable course of action available at this moment. Do not proceed with one
@@ -48,9 +51,9 @@ specifically why each alternative is inferior or ruled out. If you cannot make t
 with certainty, you are not ready to act. Keep working until you can.
 
 **3. What is the strongest argument against this action?**
-State the best case against your chosen action. Then answer it. If you cannot answer it,
-do not proceed — revise your choice or gather more information first. An unresolved
-objection is a reason to stop, not a reason to continue carefully.
+State the best case against your chosen action or conclusion. Then answer it. If you cannot
+answer it, do not proceed — revise your position or gather more information first. An
+unresolved objection is a reason to stop, not a reason to continue carefully.
 
 These three questions are not a formality. If the answers are thin, the action is not
 justified. There is no urgency that overrides this gate. No action is so small or so
@@ -103,6 +106,24 @@ Before moving to the next section, answer these explicitly:
   If any answer reveals something unaddressed, handle it before continuing.
 
 **After any result, update before acting.**
-When a test fails or something unexpected comes back, return to the relevant protocol
-section and update the analysis before taking the next action. Work out what the result
-means. Do not move from a failed result directly to a new action.
+When new information arrives — a test fails, a response surprises you, or an assumption is
+contradicted — treat it as a new challenge to the current position. Return to the relevant
+protocol section and update the analysis before taking the next action. Work out what the
+result means. Do not move from a failed result directly to a new action.
+
+### Critical Analysis
+
+- What is the actual claim or position being examined? Find where the characterization
+  is vague, imprecise, or assumes its own conclusion.
+- What evidence supports it? For each piece: scrutinize its relevance, its reliability,
+  and whether it actually supports the claim or merely correlates with it.
+- What assumptions does the position rest on? For each: what would have to be true for
+  it to be wrong? Is that possible?
+- What is being left out? Build the strongest case that something important is missing
+  or being ignored. Then examine that case — is what's missing actually relevant?
+- What is the strongest opposing position? Do not construct a weak version of it —
+  build the most compelling form of the disagreement, then work through it rigorously.
+- What does the position predict or imply? Stress-test those implications — are they
+  consistent with what is known? Do any of them, if false, undermine the position itself?
+- After running the cycle: what is the least certain part of the surviving conclusion?
+  Probe that specifically. If it holds, the conclusion holds.
