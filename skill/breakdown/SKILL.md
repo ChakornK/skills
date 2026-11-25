@@ -59,6 +59,18 @@ These three questions are not a formality. If the answers are thin, the action i
 justified. There is no urgency that overrides this gate. No action is so small or so
 obvious that it bypasses this requirement.
 
+## Outcome Prediction — Before Every Action
+
+Before taking an action, map what could happen and prepare a response to each realistic
+outcome. Consider partial success, unexpected failure, and outcomes that would show the
+current understanding is wrong.
+
+For each outcome, state what it would mean and what you would do next. Name an outcome that
+would change or defeat the current position; if it occurs, return to the argument loop and
+reassess before acting again. Include the expected outcome, at least one plausible unexpected
+outcome, and a prepared response to each. Write the prediction before executing the action,
+not after seeing the result.
+
 ## Rules That Apply to Every Protocol
 
 **The scratchpad is the most important section.**
