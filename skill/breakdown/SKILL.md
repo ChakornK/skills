@@ -10,9 +10,9 @@ description: >
 
 ## Requirement
 
-Every coding response begins with a written breakdown using the sections defined in
-`references/protocols.md`. Choose the protocol that matches the task and complete every
-section before writing code or taking any action. Do not skip sections. Do not abbreviate.
+Every coding response begins with a written breakdown. Choose the protocol that matches the
+task from the table below and complete every section before writing code or taking any action.
+Do not skip sections. Do not abbreviate.
 
 A short breakdown is a failed breakdown. If a section feels complete after a few sentences,
 it isn't — keep going. The first answer to any question in any section is a draft. After
@@ -28,6 +28,8 @@ Then write more.
 | Write new code from a description          | `code-generation` |
 | Diagnose an unclear or intermittent issue  | `deep-debug`      |
 | Restructure code without changing behavior | `refactor`        |
+
+Use the matching task-specific checks in the section below.
 
 ## Decision Gate — Required Before Every Action
 
@@ -104,61 +106,3 @@ Before moving to the next section, answer these explicitly:
 When a test fails or something unexpected comes back, return to the relevant protocol
 section and update the analysis before taking the next action. Work out what the result
 means. Do not move from a failed result directly to a new action.
-
-## Task-Specific Checks
-
-Use the relevant checks within the selected protocol. Apply the ones that matter to the
-task; these checks supplement the required protocol sections rather than replacing them.
-
-### Bug Fix
-
-- What is the actual failure? Distinguish the precise mechanism from the visible symptom,
-  and check whether the characterization depends on an unverified assumption.
-- What are the plausible causes? Check each against the available evidence before ruling
-  it in or out.
-- What is the execution path from entry to failure? Check the assumptions at each step.
-- For each proposed fix, consider whether it addresses the root cause, what it might
-  break, and whether a simpler equivalent fix exists.
-- After implementing, trace the fix through a scenario that could still fail.
-
-### Code Review
-
-- What does each relevant function actually do, and does that match its name and claimed
-  behavior?
-- For each suspicious area, check whether it is a real bug or whether the code is correct
-  under a different interpretation or context.
-- Check whether each issue's severity could be higher than it first appears, including
-  plausible production impact.
-- Identify what may have been read too quickly and revisit those first-pass assumptions.
-
-### Code Generation
-
-- What are the actual requirements? Check assumptions about unspecified behavior,
-  boundaries, invalid input, failure, and concurrency where relevant.
-- Check plausible designs against the requirements and identify inputs or conditions that
-  could expose a weakness.
-- Before implementing, mentally test the design or pseudocode against an edge case.
-- After implementing, trace a demanding input through the result and check that it really
-  meets the requirement rather than merely appearing to.
-
-### Deep Debug
-
-- Separate what is observed from what is assumed. For each important assumption, ask what
-  evidence would show it to be wrong.
-- For each plausible hypothesis, record the evidence that supports it and the evidence that
-  contradicts it before deciding whether it explains the issue.
-- Include hypotheses that would require substantial work to address; do not exclude one
-  merely because it is inconvenient.
-- After identifying a likely cause, ask what observations would differ if another cause
-  were actually responsible.
-
-### Refactor
-
-- Identify the behavioral contracts and consider whether callers may rely on undocumented
-  or accidental behavior.
-- For each transformation, assess behavioral equivalence and look for an edge case where
-  the new version could differ.
-- Check the order of changes: could an earlier step make a later one harder to verify or
-  leave behavior temporarily inconsistent?
-- After implementation, trace each public behavior through an edge case that has not yet
-  been checked.
