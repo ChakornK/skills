@@ -41,8 +41,9 @@ replace analysis with a checklist of one-line answers or inflate it with repetit
 3. **Iterate:** Develop a promising candidate, then challenge it with the strongest relevant
    counterexample, edge case, or opposing interpretation. Explain what the challenge changes. If it
    exposes a material weakness, revise the candidate and challenge the revision. If it does not,
-   explain why using task evidence. Update the risks and assumptions analysis when new concerns
-   emerge.
+   explain why using task evidence. Each pass must add a distinct fact, scenario, implication, or
+   risk; a paraphrase of an earlier challenge is not another iteration. Update the risks and
+   assumptions analysis when new concerns emerge.
    Continue while a materially different candidate or unresolved challenge could change the choice;
    stop when another pass would only repeat what is already addressed. Make at least one meaningful
    revision, or explain why the initial candidate survived its strongest challenge.
@@ -94,6 +95,12 @@ alternative, risk, or change to the plan; avoid repeating points that add no new
 **Challenge the first plausible answer.**
 Before settling, check what the first approach assumes, consider a materially different
 alternative, and test the leading choice against the strongest relevant objection.
+
+**Make iteration substantive.**
+When a challenge exposes a weakness, revise the position rather than defending it by restatement,
+then test the revision against the new concern. When the challenge does not change the position,
+use task evidence to explain why. Continue only while a distinct concern could change the decision;
+do not manufacture iterations to satisfy a count.
 
 **Update when evidence changes the plan.**
 If an action produces an unexpected result or contradicts an assumption, revisit the relevant
