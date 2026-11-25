@@ -37,8 +37,7 @@ does not waive, shorten, or replace any required breakdown element.
    do not execute them until reviewed against the task and relevant risks. Before implementation,
    also specify each planned function/module’s responsibility, inputs, outputs, key logic, and how
    units interact. Trace representative inputs using exact values through branches, state changes, and
-   outputs/errors, including a normal case and the most revealing edge or failure case. This is a
-   concise engineering specification and execution trace, not private chain-of-thought. Resolve
+   outputs/errors, including a normal case and the most revealing edge or failure case. This is an engineering specification and execution trace, not private chain-of-thought. Resolve
    unclear flow or contracts before writing code.
 6. **Outcome prediction:** Before each consequential action, state the expected result, one plausible
    unexpected result, what each would mean, and the next step for each. If the result undermines the

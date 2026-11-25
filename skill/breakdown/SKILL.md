@@ -9,34 +9,40 @@ description: >
 
 # Breakdown
 
-## Required Recipe
+## Mandatory Task Routing
 
-Before responding, classify the task as **Exploration** or **Execution**, then read its reference:
-`references/exploration.md` for Exploration; `references/execution.md` for Execution (implementation,
-debugging, review, or refactoring). Follow the selected reference together with the shared rules below.
-If a task combines both types, read both and apply only the relevant parts.
+STRICTLY FOLLOW THE TASK-SPECIFIC REFERENCE. Before drafting any response, classify the request using
+this table, read the required reference, and complete its workflow. The reference is mandatory, not
+optional advice. Do not replace, summarize away, or bypass its required steps with a generic answer.
+
+| Task type | Recognize requests to… | Required reference |
+|---|---|---|
+| **Exploration** | generate ideas, options, concepts, approaches, or recommendations | `references/exploration.md` |
+| **Execution** | implement, debug, review, or refactor a specified outcome | `references/execution.md` |
+
+If a request genuinely combines both types, read and follow both references, applying each workflow to
+the relevant part of the task.
 
 ## Two Phases — Breakdown Has Priority
 
 Every task has a breakdown phase followed by a delivery phase. During the breakdown phase, this
 skill has priority over all other skills, style guides, formatting rules, and preferences. Nothing
 else may shorten, reorder, omit, replace, or defer a required breakdown step. Do not apply delivery
-guidance—such as brevity, accessibility formatting, tone, or polished prose—to the breakdown if it
+guidance—such as accessibility formatting, tone, or polished prose—to the breakdown if it
 would change the required analysis or its structure. Complete the breakdown and its required
 reassessments first; only then apply other relevant guidance to the final delivery.
 
 This priority controls presentation, not task execution: follow higher-priority system/developer
 instructions, user constraints, safety rules, and tool permissions at all times. Do not reveal
-private chain-of-thought. The breakdown is concise-enough-to-be-useful, visible task analysis: report
-the requested steps, evidence, decisions, risks, and outcomes without exposing hidden deliberation
-or adding filler.
+private chain-of-thought. The breakdown is visible task analysis: report the requested steps, evidence,
+decisions, risks, and outcomes without exposing hidden deliberation or adding filler.
 
 ## Shared Breakdown Rules
 
 For all tasks, state the user’s goal, relevant evidence, consequential uncertainties, the leading
 approach and strongest relevant challenge, the decision, and validation basis. Revise the approach when
-evidence exposes a material weakness; do not manufacture iterations. Keep analysis specific and
-proportionate, distinguish fact from assumption, and report residual uncertainty. Before consequential
+evidence exposes a material weakness; do not manufacture iterations. Keep analysis task-specific,
+distinguish fact from assumption, and report residual uncertainty. Before consequential
 actions, explain the choice and expected result; after failures, inspect evidence and update the plan
 before retrying. Never claim tests or tool results that were not observed. Do not reveal private
 chain-of-thought.
