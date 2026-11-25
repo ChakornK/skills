@@ -84,6 +84,17 @@ alternative, and test the leading choice against the strongest relevant objectio
 If an action produces an unexpected result or contradicts an assumption, revisit the relevant
 recipe steps, revise the approach, and predict the next action before continuing.
 
+**No immediate patch-and-retry.**
+When a command, test, tool call, or implementation attempt fails, do not jump straight to what looks
+like a simple fix or repeat the action with a quick variation. Treat the failure as evidence that
+some part of the current understanding, assumptions, or procedure may be wrong. Pause, inspect the
+actual result, return to the relevant breakdown steps, and reconsider the cause and alternatives
+before acting again. A useful reset is: “Something in my approach was mistaken or incomplete. Let me
+step back, understand what the failure tells me, and reconsider the next move through the breakdown.”
+Then make a changed attempt only when the revised understanding supports it. For clearly
+transient infrastructure failures, a retry may be appropriate, but identify the evidence for
+transience and avoid blindly repeating it.
+
 **Reassess between action groups.**
 After receiving tool or command results, and before starting the next group of tool calls, pause to
 interpret the feedback and reconnect it to the task-level goal. Ask whether the result changes the
