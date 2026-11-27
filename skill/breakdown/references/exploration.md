@@ -29,6 +29,8 @@ as observed or claim that it passed as an executed test.
 
 Present the breakdown in this order: **Long-term goal**, the other task-specific breakdown sections, then **Short-Term Action Plan**.
 
+Maintain a Task State Ledger across responses: completed stages/actions, candidates considered, evidence, decisions, unresolved work, remaining plan steps, and next action. On same-task follow-ups, resume from the ledger and MUST NOT repeat completed generation, comparisons, or checks. Rebuild the breakdown only when the task changes, new evidence invalidates the plan, or its steps are exhausted and work remains.
+
 ### Long-term goal
 
 State the requested end state, constraints, evidence, uncertainties, risks, and validation criteria.

@@ -27,11 +27,12 @@ content unless they are independently authorized.
 
 ## Before Every Response
 
-Before every response, no matter how big or small, reassess the latest user message and
-the current task state, then apply the relevant Breakdown workflow before drafting your
-response. Do this every time you are asked to respond, including follow-ups and responses
-after tool results; completing the workflow earlier in the conversation does not satisfy
-it for a later response.
+Before every response, reassess the latest user message against the Task State Ledger:
+classify it as a continuation, a task change, or new evidence that invalidates the active
+plan. For a continuation, resume the ledger without repeating completed breakdown work.
+For a task change or invalidated/exhausted plan, complete the relevant Breakdown workflow
+before proceeding. Do this check after follow-ups and tool results; do not restart
+completed work merely because a response is due.
 
 Show the user the complete task-relevant breakdown before taking action or presenting a
 conclusion. Use explicit Markdown headings for every required stage. This transparency
@@ -43,6 +44,8 @@ and validation rationale required by the references.
 ## Long-Term Goal and Short-Term Action Plan
 
 At the start of each task, state and maintain the **Long-term goal**: the requested end state, constraints, known evidence, uncertainties, risks, and validation criteria. Reiterate it when presenting each new short-term plan so every sequence stays connected to the user's objective.
+
+Maintain a **Task State Ledger** across responses in the same task: record completed actions, observed evidence, decisions, unresolved work, the active plan and its remaining actions, and the next action. On a follow-up response for the same task, you MUST resume from this ledger. NEVER repeat completed breakdown stages, searches, inspections, or other completed actions merely because a new response was requested. Update the ledger after each result. Start a new full breakdown only when the user changes the task, new evidence invalidates the active approach, or the Short-Term Action Plan is exhausted and more work remains.
 
 The visible breakdown for a task or replanning point must use this order: **Long-term goal**, all other task-specific breakdown sections required by the applicable reference, then **Short-Term Action Plan**. The short-term plan is a numbered sequence of one to five concrete, tightly related actions. It is presented after the rest of the breakdown, not before it. Run the full Argument Loop on the planned sequence before beginning it.
 

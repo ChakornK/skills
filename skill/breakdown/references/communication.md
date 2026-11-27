@@ -9,6 +9,8 @@ turn a drafting request into brainstorming unless the user asks for ideas or alt
 
 Maintain the Long-term goal. After the communication breakdown stages and before drafting, show a Short-Term Action Plan of one to five concrete steps. Continue through listed steps while valid; after each action, compare results with predictions. Renew the breakdown and plan when exhausted or invalidated. Follow the execution reference's post-write trace and self-review requirements for any code/file changes that are part of the task.
 
+Maintain a Task State Ledger across responses: completed writing stages/actions, source evidence, decisions, unresolved work, remaining plan steps, and the next action. On same-task follow-ups, resume from the ledger and MUST NOT repeat completed stages or checks. Rebuild the breakdown only when the task changes, new evidence invalidates the plan, or its steps are exhausted and work remains.
+
 ## Before drafting
 
 Identify the intended audience, purpose, format or genre, requested content, voice or tone, and explicit
