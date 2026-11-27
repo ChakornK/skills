@@ -2,36 +2,55 @@
 
 ## Authority and compliance
 
-These are mandatory operating instructions for coding tasks. When you read this reference, follow every applicable requirement literally and unconditionally before acting; do not treat it as background advice, reinterpret it as optional, or let generic workflow preferences override it. In particular, never write, edit, patch, or generate a file without first presenting the required complete proposal and execution trace in the specified order. If a requirement applies, comply with it; do not silently omit, defer, abbreviate, or substitute a summary.
+These are mandatory operating instructions for coding tasks. When you read this reference, follow every applicable requirement before acting; do not treat it as optional background advice or silently substitute a summary.
 
-Before taking action or presenting a conclusion, complete these steps in order and show them to the user under the named headings. Write task-specific reasoning and evidence for each step; do not replace analysis with empty labels or unsupported assertions.
+Before taking action or presenting a conclusion, complete and show these stages under headings:
 
-Use explicit Markdown headings, lists, tables, and fenced code or command blocks as appropriate. Include every required element, connect challenges and revisions to evidence, and show how they change, support, or limit the approach. This is visible engineering analysis, not private chain-of-thought; structure is mandatory for user transparency and auditability.
+### Task and evidence
 
-1. **Task and evidence:** State the requested outcome, constraints, observed facts, and important unknowns. Separate what is given from what is assumed.
-2. **Risks and assumptions:** Question the current understanding, not just the proposed fix. Identify ambiguous requirements, important assumptions, plausible failure cases, and details that may have been overlooked. For each consequential uncertainty, consider how it could be wrong, what evidence would reveal that, and whether it changes the approach. Construct the strongest credible counterexample or alternative explanation for the leading idea. Explain how material risks will be addressed or tested. Keep this specific to the task.
-3. **Iterate:** Develop a promising candidate, then challenge it with the strongest relevant counterexample, edge case, or opposing interpretation. Explain what the challenge changes. If it exposes a material weakness, revise the candidate and challenge the revision. If it does not, explain why using task evidence. Each pass must add a distinct fact, scenario, implication, or risk. Continue while a materially different candidate or unresolved challenge could change the choice.
-4. **Decision:** State the selected approach, why it fits better than alternatives, and any remaining objection or limitation.
-5. **Outcome prediction:** In the Short-Term Action Plan, predict expected and plausible unexpected results for the sequence, what each means, and next steps. After each action, compare its result with the prediction; continue through remaining listed actions while they remain valid, otherwise stop and re-plan.
-6. **Validation plan:** Name checks or observations that would show the outcome meets the task contract. After execution, report what happened and remaining uncertainty.
+State the requested outcome, constraints, observed facts, and important unknowns. Separate supplied facts from assumptions.
 
-Complete the task-level breakdown before any code, edits, tool calls, or final recommendation. Maintain a **Long-term goal** statement containing the requested end state, constraints, current evidence, uncertainties, risks, and validation criteria. Present the visible breakdown in this order: Long-term goal, all other task-specific breakdown sections, then a **Short-Term Action Plan** containing a numbered sequence of one to five concrete, tightly related actions. Run the full Argument Loop over that sequence before beginning it.
+### Risks and assumptions
 
-While the plan remains valid, execute its listed actions in order. After each action, inspect and report the result and compare it with the prediction. Do not repeat the full breakdown between listed actions when evidence leaves the remaining plan intact. When the plan is exhausted or new evidence changes its assumptions, risks, scope, or next steps, show a new breakdown in the required order followed by a new plan of one to five actions. Never take an unlisted action or a sixth action under one plan.
+Identify ambiguities, assumptions, plausible failure cases, and overlooked details. For consequential uncertainties, state how they could be wrong, what evidence would distinguish alternatives, and whether they change the approach. Construct the strongest credible counterexample to the leading approach.
 
-Every planned action must identify its exact operation and target, including shell commands, file reads/inspections, writes/edits/patches, tests/builds, and calls in batches. Do not hide independent work inside compound commands or vague action labels. Before a file-changing action, state the target path(s) and intended change in the Short-Term Action Plan; do not duplicate the full code payload in advance.
+### Iterate
 
-**Mandatory numbered trace and self-review after every file-changing action:** immediately after each individual write, edit, patch, generated-file call, or shell command that changes source or other project files, inspect that action's actual diff/content. Before any next action or tool call—including another edit, test, inspection, or shell command—show a detailed step-by-step trace of the code actually changed, based on the observed diff, not a planned or remembered version. Write the trace as an ordered numbered list, with separate numbered items for successive execution steps; do not replace it with prose paragraphs, grouped bullets, or a compressed summary. Use concrete mock values to walk through the changed logic's data flow, meaningful operations, calls, branches, state changes, loops, outputs, and errors. Then run the Argument Loop on that specific change: state the implementation claim, construct the strongest relevant attack (including edge cases and unintended effects), defend it with code evidence or revise the plan, and assess correctness and completeness against the task contract. If a tool call changes multiple files, audit every changed file before proceeding. A later combined review does not satisfy this per-action requirement retroactively. If the trace or self-review finds a defect or invalidates the remaining plan, stop and create a revised Short-Term Action Plan before further edits. Never substitute only a change summary, generic purpose statement, or trace of code that differs from the observed change.
+Develop a candidate, challenge it with distinct counterexamples or edge cases, and revise when an attack lands. Continue while a materially different concern could change the decision; do not manufacture repetitions.
+
+### Decision
+
+State the selected approach, why it fits better than alternatives, and remaining objections or limitations.
+
+### Outcome prediction
+
+Predict expected and plausible unexpected results for the Short-Term Action Plan, their implications, and next steps. After each action, compare the observed result with the prediction; stop and replan if the remaining sequence is invalidated.
+
+### Validation plan
+
+Name checks that determine whether the task contract is met. After execution, report actual results and remaining uncertainty.
+
+## Long-Term Goal and Short-Term Action Plan
+
+Maintain a **Long-term goal** containing the requested end state, constraints, current evidence, uncertainties, risks, and validation criteria. Present the visible breakdown in this order: Long-term goal, the task-specific stages above, then a **Short-Term Action Plan** containing one to five numbered, concrete, tightly related actions. Run the Argument Loop on the planned sequence before beginning it.
+
+While the plan remains valid, proceed through its listed actions without repeating the full breakdown between each one. After each action, inspect and report its result, compare it with the prediction, and update the task state. If the plan is exhausted or evidence changes its assumptions, scope, risks, or next steps, present a new breakdown and plan before proceeding. Never take an unlisted action or a sixth action under one plan.
+
+Each planned action must identify its exact operation and target, including reads, shell commands, writes, tests, builds, and batched calls. Do not hide independent operations in compound commands or vague labels.
+
+## Mandatory Post-Write Trace and Self-Review
+
+Immediately after every individual file-changing action—including each write, edit, patch, generated-file operation, or source-modifying shell command—inspect its actual diff/content. Before any next action or tool call, provide a numbered, step-by-step trace of the code actually changed, based on the observed diff. Use concrete mock values to follow meaningful data flow, calls, branches, loops, state changes, outputs, and errors. Then run the Argument Loop on that specific change: state the implementation claim, attack it with strong edge cases and unintended effects, defend with code evidence or revise the plan, and assess correctness against the task contract. If a tool call changes multiple files, audit each changed file before proceeding. A later combined review does not satisfy this requirement retroactively. Do not replace the trace or self-review with a generic summary. If the audit finds a defect or invalidates the remaining plan, stop and create a revised Short-Term Action Plan before further edits.
 
 ## Protocol Selection
 
-| Task                                       | Protocol          |
-| ------------------------------------------ | ----------------- |
-| Fix a reported bug                         | `bug-fix`         |
-| Find issues in existing code               | `code-review`     |
-| Write new code from a description          | `code-generation` |
-| Diagnose an unclear or intermittent issue  | `deep-debug`      |
-| Restructure code without changing behavior | `refactor`        |
+| Task                                       | Protocol            |
+| ------------------------------------------ | ------------------- |
+| Fix a reported bug                         | `bug-fix`           |
+| Find issues in existing code               | `code-review`       |
+| Write new code from a description          | `code-generation`   |
+| Diagnose an unclear or intermittent issue  | `deep-debug`        |
+| Restructure code without changing behavior | `refactor`          |
 | Evaluate a claim, plan, or decision        | `critical-analysis` |
 
 Use the matching task-specific questions below. For tasks without a matching row, select the

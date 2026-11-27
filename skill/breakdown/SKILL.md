@@ -341,17 +341,17 @@ they are the substance of the argument.
 
 ### Critical Analysis
 
-- What is the actual claim or position being examined? Attack any characterization that
+- What is the actual claim or position being examined? Find where the characterization
   is vague, imprecise, or assumes its own conclusion.
-- What evidence supports it? For each piece of evidence: attack its relevance, its
-  reliability, and whether it actually supports the claim or merely correlates with it.
-- What assumptions does the position rest on? For each assumption: attack it. What would
-  have to be true for it to be wrong? Is that possible?
+- What evidence supports it? For each piece: scrutinize its relevance, its reliability,
+  and whether it actually supports the claim or merely correlates with it.
+- What assumptions does the position rest on? For each: what would have to be true for
+  it to be wrong? Is that possible?
 - What is being left out? Build the strongest case that something important is missing
-  or being ignored. Then attack that case — is what's missing actually relevant?
+  or being ignored. Then examine that case — is what's missing actually relevant?
 - What is the strongest opposing position? Do not construct a weak version of it —
-  build the most compelling form of the disagreement, then attack it rigorously.
-- What does the position predict or imply? Attack those implications — are they
+  build the most compelling form of the disagreement, then work through it rigorously.
+- What does the position predict or imply? Stress-test those implications — are they
   consistent with what is known? Do any of them, if false, undermine the position itself?
 - After running the loop: what is the least certain part of the surviving conclusion?
   Attack that specifically. If it holds, the conclusion holds.

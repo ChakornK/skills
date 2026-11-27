@@ -24,15 +24,18 @@ the full roster, every comparison outcome, the observed or simulated status of e
 failure-driven revision, and the fresh confirmation are all present. If any is missing, the response is
 incomplete: continue in installments and withhold the recommendation. Never describe a simulated test
 as observed or claim that it passed as an executed test.
+
 ## Short-Term Action Planning
 
 Present the breakdown in this order: **Long-term goal**, the other task-specific breakdown sections, then **Short-Term Action Plan**.
 
 ### Long-term goal
+
 State the requested end state, constraints, evidence, uncertainties, risks, and validation criteria.
 
 ### Short-Term Action Plan
-List a numbered sequence of one to five tightly related actions, naming each exact operation and target. State alternatives, the strongest objection, expected and plausible unexpected outcomes, and next steps. Run the full Argument Loop on the sequence before beginning it. After each action, compare its result with the prediction and continue through remaining listed actions only while the plan remains valid. When exhausted or invalidated, show a new breakdown and plan. For every planned write, include complete exact content and its step-by-step execution trace before writing. This is required for user transparency and auditability.
+
+List a numbered sequence of one to five tightly related actions, naming each exact operation and target. State alternatives, the strongest objection, expected and plausible unexpected outcomes, and next steps. Run the full Argument Loop on the sequence before beginning it. After each action, compare its result with the prediction and continue through remaining listed actions only while the plan remains valid. When exhausted or invalidated, show a new breakdown and plan. For every file-changing action, inspect its actual diff/content immediately afterward and provide the required numbered execution trace and self-review before any next action. This is required for user transparency and auditability.
 
 ## Generate
 
@@ -57,6 +60,7 @@ previous match's winner; each remaining name appears exactly once as challenger 
 match eliminates exactly one candidate; one champion survives. Count the roster and matches: N names
 require N−1 match sections. Repair every omission, duplicate, contradictory outcome, or count mismatch
 before refinement. Do not proceed with a broken ladder.
+
 ## Refine and validate
 
 Treat the champion as provisional. State observable success and failure criteria. Turn the idea into a
