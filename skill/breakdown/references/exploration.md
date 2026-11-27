@@ -15,7 +15,7 @@ shrink a stage. Do not reveal or hint at the recommendation early.
 3. **Compare:** Run the complete headed Markdown champion ladder below. Eliminate exactly one candidate per match.
 4. **Refine:** Apply the finalist, find a concrete weakness, revise it, and test the revision.
 5. **Confirm:** Apply the final version to a fresh, distinct case and assess it against the criteria.
-6. **Recommend:** Only after the preceding stages reconcile, state the recommendation and remaining limits. For actions in any stage, use the bounded Immediate action plan below; after each result, update the goal and revise the remaining sequence when needed.
+6. **Recommend:** Only after the preceding stages reconcile, state the recommendation and remaining limits. For actions in any stage, use the bounded Short-Term Action Plan below; after each result, update the task state and revise the remaining sequence when needed.
 
 Before moving from comparison to refinement, count the named candidates and comparison sections aloud
 in the response. If there are N candidates, there MUST be exactly N−1 headed match sections. If the count or winner
@@ -24,15 +24,15 @@ the full roster, every comparison outcome, the observed or simulated status of e
 failure-driven revision, and the fresh confirmation are all present. If any is missing, the response is
 incomplete: continue in installments and withhold the recommendation. Never describe a simulated test
 as observed or claim that it passed as an executed test.
-## Action planning
+## Short-Term Action Planning
 
-Before acting in any stage, show these headings:
+Present the breakdown in this order: **Long-term goal**, the other task-specific breakdown sections, then **Short-Term Action Plan**.
 
 ### Long-term goal
 State the requested end state, constraints, evidence, uncertainties, risks, and validation criteria.
 
-### Immediate action plan
-List a numbered sequence of one to five tightly related steps, each naming the exact action and target. Restate the Long-term goal, explain how the sequence advances it, identify alternatives and the strongest objection, and predict expected and plausible unexpected results with next steps. Run the full Argument Loop on the sequence before its first step. Include every file read, shell command, write/edit/patch, test, and call in a batch as an explicit step. For every write/edit/patch step, include the exact proposed content and explanation before execution. After each result, compare evidence with prediction; if the remaining steps need revision, stop and re-plan. Otherwise continue only through the listed steps. Start a new plan after completing the sequence. This is required for user transparency and auditability; no action is exempt as routine, read-only, small, reversible, or already planned.
+### Short-Term Action Plan
+List a numbered sequence of one to five tightly related actions, naming each exact operation and target. State alternatives, the strongest objection, expected and plausible unexpected outcomes, and next steps. Run the full Argument Loop on the sequence before beginning it. After each action, compare its result with the prediction and continue through remaining listed actions only while the plan remains valid. When exhausted or invalidated, show a new breakdown and plan. For every planned write, include complete exact content and its step-by-step execution trace before writing. This is required for user transparency and auditability.
 
 ## Generate
 
