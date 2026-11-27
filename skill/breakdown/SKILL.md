@@ -40,21 +40,29 @@ state, constraints, known evidence, uncertainties, risks, and validation criteri
 reiterating this goal in every subsequent action plan so each step remains connected to
 the user's objective.
 
-Before every individual action, show an **Immediate action plan** with Markdown headings.
-Name the exact next action and its purpose; list realistic alternatives; state the
-strongest objection and how it is addressed; predict expected and plausible unexpected
-outcomes and what each would imply; and specify the next step for each outcome. Then run
-the full Argument Loop on that immediate action before performing it. After receiving
-the result, report the observed evidence, update the Long-term goal state, and prepare a
-new Immediate action plan before any next action.
+Before acting, show an **Immediate action plan** with Markdown headings and a numbered
+sequence of one to five specific next steps. A plan may cover multiple tightly related
+steps, but never more than five; do not make it so broad that its steps depend on
+unobserved results. Reiterate the Long-term goal, explain why this sequence advances it,
+name realistic alternatives and the strongest objection, and predict expected and
+plausible unexpected outcomes with next steps. Run the full Argument Loop on the entire
+planned sequence before its first action.
 
-An action means each individual tool invocation, including every shell command, file
-inspection/read, file write/edit/patch, test/build command, and each call in a batch or
-parallel group. No action is exempt because it is small, routine, read-only, grouped,
-reversible, or part of an earlier plan. Never execute multiple independent actions under
-one plan. A multi-command shell invocation counts as multiple actions; separate commands
-and plan each independently. Do not proceed to a tool call until its visible immediate
-plan and full action-specific Argument Loop are complete.
+Every listed step must identify its concrete operation and target. This includes each
+shell command, file inspection/read, file write/edit/patch, test/build command, and each
+call in a batch or parallel group. No step is exempt because it is small, routine,
+read-only, reversible, or previously planned. Before any step that writes, edits, or
+patches a file, include the exact proposed content in a fenced block in the Immediate
+action plan and explain its relevant behavior, state changes, outputs, and errors. The
+proposal is mandatory and must be executed as written; if the implementation needs to
+differ, stop and create a revised plan and proposal before writing.
+
+After each step, report the observed result and compare it with the prediction. If the
+result differs materially, or reveals new assumptions or risks, stop the remaining
+sequence and run a new full Argument Loop with an updated Long-term goal and a revised
+Immediate action plan of no more than five steps. Otherwise, continue only with the
+remaining steps already specified. After the sequence, prepare a new plan before any
+further action. Never execute an unplanned step or a sixth step under the same plan.
 
 ## The Argument Loop
 

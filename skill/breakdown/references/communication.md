@@ -5,10 +5,7 @@ reader or audience. This includes creative writing, lab reports, research papers
 presentations, documentation, and public-facing communication. Follow a supplied brief directly; do not
 turn a drafting request into brainstorming unless the user asks for ideas or alternatives.
 
-Before every individual action, maintain and show the Long-term goal, then a headed Immediate
-action plan and full Argument Loop for the exact next action. This includes each file read, shell
-command, write/edit/patch, test, and each call in a batch. After every result, update the goal and
-show a fresh plan before acting again. Use visible Markdown headings for transparency and auditability. Before each action, include the task-relevant headings from the communication workflow as well as the Immediate action plan.
+Before acting, maintain and show the **Long-term goal** and a headed **Immediate action plan** containing a numbered sequence of one to five tightly related steps. Run the full Argument Loop on that sequence before its first step. Include each read, shell command, write/edit/patch, test, and batch call as an explicit step. For every write/edit/patch step, include the exact proposed content and explanation in the plan before execution. After each result, compare it with the prediction; if it changes the remaining sequence, stop and re-plan. Otherwise continue only through listed steps, then create a new plan. Use visible Markdown headings for user transparency and auditability, and include the communication workflow's task-specific stages.
 
 ## Before drafting
 

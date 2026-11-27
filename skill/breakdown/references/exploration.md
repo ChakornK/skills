@@ -15,7 +15,7 @@ shrink a stage. Do not reveal or hint at the recommendation early.
 3. **Compare:** Run the complete headed Markdown champion ladder below. Eliminate exactly one candidate per match.
 4. **Refine:** Apply the finalist, find a concrete weakness, revise it, and test the revision.
 5. **Confirm:** Apply the final version to a fresh, distinct case and assess it against the criteria.
-6. **Recommend:** Only after the preceding stages reconcile, state the recommendation and remaining limits. Before every action in any stage, show an Immediate action plan that restates the Long-term goal and run the full Argument Loop for that individual action; after its result, update the goal and repeat before the next action.
+6. **Recommend:** Only after the preceding stages reconcile, state the recommendation and remaining limits. For actions in any stage, use the bounded Immediate action plan below; after each result, update the goal and revise the remaining sequence when needed.
 
 Before moving from comparison to refinement, count the named candidates and comparison sections aloud
 in the response. If there are N candidates, there MUST be exactly N−1 headed match sections. If the count or winner
@@ -26,18 +26,13 @@ incomplete: continue in installments and withhold the recommendation. Never desc
 as observed or claim that it passed as an executed test.
 ## Action planning
 
-For every individual action in every stage, show these headings before acting:
+Before acting in any stage, show these headings:
 
 ### Long-term goal
 State the requested end state, constraints, evidence, uncertainties, risks, and validation criteria.
 
 ### Immediate action plan
-Restate the Long-term goal, name the exact next action and purpose, list alternatives, address the
-strongest objection, predict expected and plausible unexpected results, and state the next step for
-each outcome. Then run the full Argument Loop under headings for that action. This includes every
-file read, shell command, write, edit, patch, test, and each call in a batch. After each result, update
-the Long-term goal and show a fresh plan before acting again. This is required for user transparency
-and auditability; no action is exempt as routine, read-only, small, reversible, or already planned.
+List a numbered sequence of one to five tightly related steps, each naming the exact action and target. Restate the Long-term goal, explain how the sequence advances it, identify alternatives and the strongest objection, and predict expected and plausible unexpected results with next steps. Run the full Argument Loop on the sequence before its first step. Include every file read, shell command, write/edit/patch, test, and call in a batch as an explicit step. For every write/edit/patch step, include the exact proposed content and explanation before execution. After each result, compare evidence with prediction; if the remaining steps need revision, stop and re-plan. Otherwise continue only through the listed steps. Start a new plan after completing the sequence. This is required for user transparency and auditability; no action is exempt as routine, read-only, small, reversible, or already planned.
 
 ## Generate
 
