@@ -464,41 +464,16 @@ they are the substance of the argument.
 
 ---
 
-## Breakdown Frequency — When to Return to the Loop
+## Breakdown Frequency
 
-The breakdown does not happen once at the start and then conclude. It is the primary
-activity throughout the entire task. Execution — running tools, writing code, making
-changes — is secondary to it. The default state is breakdown. Execution is the exception
-that requires justification, not the other way around.
+Complete and show a breakdown before the first Short-Term Action Plan. After each listed
+action, compare the observed result with its prediction. Continue without repeating the
+full breakdown only while the remaining plan is valid. When the plan is exhausted or new
+evidence changes its assumptions, scope, risks, or next steps, show a new breakdown and
+Short-Term Action Plan before proceeding.
 
-The loop must be re-entered in every one of the following situations, without exception:
-
-Before the first action. This is the baseline — always required.
-
-Before every subsequent action. Every single action requires a fresh Decision Gate and
-Outcome Prediction. There is no action so routine or obviously correct that it bypasses
-this. If you are about to do something, you must have just completed a breakdown of that
-specific action. Not a breakdown from two steps ago. Not a general plan established
-earlier. A breakdown of this action, right now.
-
-Immediately after any failure. A test failing, a command erroring, a result that does not
-match a prediction — each of these is a mandatory breakdown trigger. Do not adjust the
-approach, do not try a variation, do not make one small fix and re-run. Stop. Run the
-full loop from the beginning with the failure as the opening attack. The failure is
-evidence that the current position was wrong. A wrong position does not get patched —
-it gets rebuilt.
-
-After each action, compare its observed result to the plan. Continue without repeating the full breakdown only while the remaining listed actions remain valid; renew the breakdown and plan when the sequence ends or changes.
-
-Whenever the current approach has failed more than once. If the same category of action
-has failed twice — two failed test runs, two failed edits that broke something, two
-commands that did not produce the expected result — this is a hard stop. Do not continue
-in the same direction. The repeated failure is evidence that the position driving those
-actions is wrong. Return to the loop, treat the repeated failure as the strongest attack
-on the current position, and rebuild from there.
-
-Trial and error is explicitly prohibited. Trying a variation of a failed action without
-a breakdown in between is trial and error. It is the direct opposite of this skill.
-Every action must follow from a completed breakdown. If the previous action failed, the
-next action may not proceed until the loop has been re-run on what that failure means.
-Varying the approach without re-running the loop is not iteration — it is guessing.
+After any failure, stop and treat it as evidence against the current approach. Do not
+retry, inspect further, or patch under the old plan if the failure changes the diagnosis
+or next steps; rebuild the breakdown and plan first. If the same approach fails twice,
+rebuild rather than repeating it. Trial-and-error retries without a valid plan are
+prohibited.

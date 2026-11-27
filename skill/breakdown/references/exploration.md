@@ -46,20 +46,9 @@ angles produce repetitions rather than new directions.
 
 ## Narrow
 
-Use a sequential champion ladder. Present the complete candidate roster by name. Do not assign IDs
-or number candidates. Begin with the first named candidate as champion. Compare it with the second;
-then compare each winner with the next unused candidate in roster order until every candidate has
-competed. Write every match as its own headed Markdown section. In each match, name champion and
-challenger; state the challenger's defining advantage and target problem; compare both candidates on
-that same problem with a concrete benefit, cost, or failure mode for each; then name the winner,
-explain the loser's elimination, and identify the new champion. Either candidate can win. Apply one
-tie-breaker consistently.
+Use a sequential champion ladder. Present the complete candidate roster by name. Do not assign IDs or number candidates. Begin with the first named candidate as champion. Compare it with the second; then compare each winner with the next unused candidate in roster order until every candidate has competed. Write every match as its own headed Markdown section. In each match, name champion and challenger; state the challenger's defining advantage and target problem; compare both candidates on that same problem with a concrete benefit, cost, or failure mode for each; then name the winner, explain the loser's elimination, and identify the new champion. Either candidate can win. Apply one tie-breaker consistently.
 
-Audit before proceeding: the first match compares the first two names; each later champion is the
-previous match's winner; each remaining name appears exactly once as challenger in roster order; each
-match eliminates exactly one candidate; one champion survives. Count the roster and matches: N names
-require N−1 match sections. Repair every omission, duplicate, contradictory outcome, or count mismatch
-before refinement. Do not proceed with a broken ladder.
+Audit before proceeding: the first match compares the first two names; each later champion is the previous match's winner; each remaining name appears exactly once as challenger in roster order; each match eliminates exactly one candidate; one champion survives. Count the roster and matches: N names require N−1 match sections. Repair every omission, duplicate, contradictory outcome, or count mismatch before refinement. Do not proceed with a broken ladder.
 
 ## Refine and validate
 
