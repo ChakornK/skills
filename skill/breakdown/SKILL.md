@@ -9,31 +9,52 @@ description: >
 
 # Breakdown
 
-## Two Phases, Two Standards
+## Mandatory Task-Specific Reference
 
-Every response has two distinct phases: the **breakdown** and the **delivery**. They are
-governed by completely separate standards. Applying the wrong standard to the wrong phase
-is a failure in both directions.
+Before starting any task, no matter how small, classify the request and read at least
+one matching task-specific reference from `references/`. Do this before inspecting task
+files, using tools, making changes, or drafting a task response. Use the reference's
+workflow for the task. If the request spans multiple task types, read the relevant
+reference for each type; if classification is uncertain, read the closest-fit reference
+and adapt its workflow.
 
-**The breakdown is work. Verbosity here is not a flaw — it is the mechanism.**
-Any instruction to be concise, brief, scannable, or direct does not apply during the
-breakdown. Those instructions exist to govern how results are presented to the user, not
-how work is conducted before that. A breakdown shortened by a conciseness rule is a broken
-breakdown. Length, repetition, and exhaustive exploration are correct during this phase.
-No formatting skill, style rule, or brevity guideline overrides this.
+## Before Every Response
 
-**The delivery is output. Apply all relevant presentation standards there.**
-Once the breakdown is complete and a conclusion has survived the loop, present the result
-cleanly. Code should be well-structured. Answers should be direct. Prose should be
-appropriately concise. Any skills governing tone, format, or brevity apply here and only here.
+Before every response, no matter how big or small, reassess the latest user message and
+the current task state, then apply the relevant Breakdown workflow before drafting your
+response. Do this every time you are asked to respond, including follow-ups and responses
+after tool results; completing the workflow earlier in the conversation does not satisfy
+it for a later response.
 
-**The phases do not overlap.**
-The breakdown does not appear in the delivery — the work is done before the result is
-presented. The delivery standards do not reach back into the breakdown — the breakdown
-runs under its own rules regardless of what other skills say about output length or style.
-Run the full breakdown. Then deliver the result.
+Show the user the complete task-relevant breakdown before taking action or presenting a
+conclusion. Use explicit Markdown headings for every required stage. This transparency
+lets the user audit your assumptions, risks, decisions, actions, and verification; it is
+part of safe, accountable work, not optional narration. Do not reveal private
+chain-of-thought. Show the task-specific evidence, alternatives, decisions, predictions,
+and validation rationale required by the references.
 
----
+## Long-Term Goal and Immediate Action Plan
+
+At the start of each task, state and maintain the **Long-term goal**: the requested end
+state, constraints, known evidence, uncertainties, risks, and validation criteria. Keep
+reiterating this goal in every subsequent action plan so each step remains connected to
+the user's objective.
+
+Before every individual action, show an **Immediate action plan** with Markdown headings.
+Name the exact next action and its purpose; list realistic alternatives; state the
+strongest objection and how it is addressed; predict expected and plausible unexpected
+outcomes and what each would imply; and specify the next step for each outcome. Then run
+the full Argument Loop on that immediate action before performing it. After receiving
+the result, report the observed evidence, update the Long-term goal state, and prepare a
+new Immediate action plan before any next action.
+
+An action means each individual tool invocation, including every shell command, file
+inspection/read, file write/edit/patch, test/build command, and each call in a batch or
+parallel group. No action is exempt because it is small, routine, read-only, grouped,
+reversible, or part of an earlier plan. Never execute multiple independent actions under
+one plan. A multi-command shell invocation counts as multiple actions; separate commands
+and plan each independently. Do not proceed to a tool call until its visible immediate
+plan and full action-specific Argument Loop are complete.
 
 ## The Argument Loop
 
@@ -60,9 +81,10 @@ This is not a formatting exercise. The attacks must be genuine. A weak attack fo
 by an easy defense is not a loop iteration — it is avoidance. If you find yourself
 winning too easily, you are not attacking hard enough.
 
-Write the argument out in full. Every proposal, every attack, every defense. Do not
-summarize the loop after running it internally — the written argument is the work, not
-a record of work done elsewhere.
+Show the argument under explicit Markdown headings, including the position, strongest
+attack, defense or revision, and further distinct attacks. Do not hide the loop or
+replace it with an assertion that it was performed. The visible, task-specific argument
+is how the user can audit the basis for the action.
 
 ## Paranoia as the Default Posture
 
@@ -162,13 +184,10 @@ would be preferable and determine which condition applies here.
 
 ## Loop Rules
 
-**Write in continuous prose. No labels, headers, or structural markers.**
-The breakdown is not a document — it is work being done. Labels like "Position:",
-"Attack:", "Defense:", "Harder attack:", and bold section headers inside the breakdown
-impose the appearance of iteration without the substance of it. They let you check a box
-without completing a loop. Write continuously, as argument and counter-argument unfolding
-in sequence. The structure emerges from the content, not from markers announcing what the
-content is supposed to be.
+**Use explicit headings.** Show the breakdown as structured Markdown with headings for
+the required stages and for each action's position, attack, defense/revision, and
+outcome prediction. Labels make the reasoning auditable; they do not replace substantive
+analysis. Every heading must contain task-specific reasoning and evidence.
 
 **The loop must run a minimum of 5 full iterations before exit conditions are even checked.**
 One iteration is: a position stated, a genuine attack constructed, and either a successful
@@ -272,9 +291,11 @@ was dismissed as "unlikely" without a full argument still stands.
 Feeling confident is not an exit condition. Having written a lot is not an exit condition.
 The loop ends when every condition above is met — not before.
 
-## Decision Gate — Before Every Action
+### Immediate Action Argument Loop — Before Every Action
 
-Before taking any action — run the argument loop on the action itself:
+Before taking any action — including the smallest read, inspection, shell command, file
+write, edit, patch, test, or tool call — show the Immediate action plan and run the full
+argument loop on that exact action:
 
 - What are all the other actions available? Name them. Apply the generation minimum.
 - Why is this action strictly better than each alternative? Not "better" — strictly better.
@@ -282,12 +303,14 @@ Before taking any action — run the argument loop on the action itself:
 - What is the strongest argument that this action is wrong? Answer it.
   If you cannot answer it, do not proceed.
 
-No action is exempt. Nothing is too small or too obvious to skip this gate.
+No action is exempt. Do not use one plan to cover multiple independent actions or rely
+on a prior task-level plan. State the Long-term goal again in each immediate plan.
 
-## Outcome Prediction — Before Every Action
+### Immediate Action Outcome Prediction — Before Every Action
 
-Before taking any action, map what could happen. Do not just decide what to do — predict
-the full space of outcomes and prepare a response to each.
+Before taking any action, show what could happen. Do not just decide what to do — predict
+the full realistic outcome space and prepare a response to each in the Immediate action
+plan, while restating the Long-term goal.
 
 **1. What are all the realistic outcomes?**
 Enumerate every plausible result, including partial successes, unexpected failures, and
@@ -311,8 +334,8 @@ Name them. If any are likely, they are attack material for the loop.
 Name it explicitly. If that outcome appears, return to the argument loop immediately.
 Do not rationalize an unexpected result — treat it as a successful attack on your position.
 
-Write this prediction out before executing. A prediction written after seeing the result
-is not a prediction.
+Write this prediction under a visible **Outcome Prediction** heading before executing.
+A prediction written after seeing the result is not a prediction.
 
 **When predictions fail:**
 If the actual result does not match any predicted outcome, stop. Do not act again
@@ -477,9 +500,9 @@ full loop from the beginning with the failure as the opening attack. The failure
 evidence that the current position was wrong. A wrong position does not get patched —
 it gets rebuilt.
 
-After any sequence of two or more consecutive actions without a breakdown in between.
-If you notice you have taken two actions in a row without a breakdown, stop immediately.
-You are operating without justification. Run the full loop before continuing.
+After every action and its result, re-enter the loop before the next action. Never take
+two actions consecutively without a new visible breakdown and action-specific plan in
+between.
 
 Whenever the current approach has failed more than once. If the same category of action
 has failed twice — two failed test runs, two failed edits that broke something, two
